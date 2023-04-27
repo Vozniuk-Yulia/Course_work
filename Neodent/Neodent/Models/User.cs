@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Neodent.Models
 {
     [Alias("users")]
-    internal class User
+    public class User
     {
         [AutoIncrement, PrimaryKey]
         public int Id { get; set; }
@@ -22,7 +22,11 @@ namespace Neodent.Models
         public string Address { get; set; }
         public string Gender { get; set; }
         public string ImageUrl { get; set; }
+
         public Dentist Dentist { get; set; }
+
         public Patient Patient { get; set; }
+      
+        public Administrator Administrator { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace Neodent.Forms
 {
     public partial class DashboardForm : Form
     {
-        DentistryDBContext dbContext;
+       
         public DashboardForm()
         {
             InitializeComponent();
@@ -87,10 +87,19 @@ namespace Neodent.Forms
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             LoadChart1();
-            //allPatientNum.Text = dbContext.Patients.Count().ToString();
-            //allDentistNum.Text = dbContext.Dentists.Count().ToString();
-            //allApoinmentNum.Text = dbContext.Appointments.Count().ToString();
-            //allBillingNum.Text = dbContext.Invoices.Count().ToString();
+            int countOfExperienceMore;
+            using (var dbContext=new DentistryDBContext())
+            {
+                countOfExperienceMore = dbContext.Dentists.Where(u => u.WorkExperience > 5).Count();
+                allPatientNum.Text = dbContext.Patients.Count().ToString();
+                allDentistNum.Text = dbContext.Dentists.Count().ToString();
+                allApoinmentNum.Text = dbContext.Appointments.Count().ToString();
+                //bunifuCircleProgressbar1.Value = (countOfExperienceMore/dbContext.Dentists.Count()) * 100;
+                countAppoinmentToday.Text = dbContext.Appointments.Where(d => d.Date.Date == DateTime.Today).Count().ToString();
+                countNewPatient.Text=dbContext.Patients.Where(d=>d.RegistratedDate.Date == DateTime.Now.Date.AddDays(-30)).Count().ToString();
+            }
+
+
         }
 
         private void chart3_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Neodent
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -17,9 +17,9 @@ namespace Neodent
         static void Main()
         {
             Application.EnableVisualStyles();
-            using(var dbContext = new DentistryDBContext())
+            using (var dbContext = new DentistryDBContext())
             {
-                dbContext.Database.CreateIfNotExists();
+                
             }
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());

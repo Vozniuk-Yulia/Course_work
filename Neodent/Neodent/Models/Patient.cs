@@ -8,15 +8,17 @@ using System.Threading.Tasks;
 namespace Neodent.Models
 {
     [Alias("patients")]
-    internal class Patient:User
+    public class Patient
     {
-        [ForeignKey(typeof(User), OnDelete = "CASCADE")]
-        public int UserId { get; set; }
+        [AutoIncrement, PrimaryKey]
+        public int Id { get; set; }
         public DateTime RegistratedDate { get; set; }
-        public List<string> Allergies { get; set; }
+        public string Allergies { get; set; }
         public DateTime LastVisit { get; set; }
         public string BloodType { get; set; }
         public  ICollection<PatientHistory> patientHistories { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
 
     }
 }

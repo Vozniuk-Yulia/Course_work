@@ -68,10 +68,10 @@
             this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.countAppoinmentToday = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.countNewPatient = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -422,22 +422,22 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.label19);
+            this.panel9.Controls.Add(this.countAppoinmentToday);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Location = new System.Drawing.Point(208, 209);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(90, 123);
             this.panel9.TabIndex = 12;
             // 
-            // label19
+            // countAppoinmentToday
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(30, 7);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 19);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "20";
+            this.countAppoinmentToday.AutoSize = true;
+            this.countAppoinmentToday.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countAppoinmentToday.Location = new System.Drawing.Point(30, 7);
+            this.countAppoinmentToday.Name = "countAppoinmentToday";
+            this.countAppoinmentToday.Size = new System.Drawing.Size(31, 19);
+            this.countAppoinmentToday.TabIndex = 10;
+            this.countAppoinmentToday.Text = "20";
             // 
             // label17
             // 
@@ -450,22 +450,22 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label18);
+            this.panel8.Controls.Add(this.countNewPatient);
             this.panel8.Controls.Add(this.label16);
             this.panel8.Location = new System.Drawing.Point(31, 209);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(90, 123);
             this.panel8.TabIndex = 11;
             // 
-            // label18
+            // countNewPatient
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(24, 7);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(31, 19);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "36";
+            this.countNewPatient.AutoSize = true;
+            this.countNewPatient.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countNewPatient.Location = new System.Drawing.Point(24, 7);
+            this.countNewPatient.Name = "countNewPatient";
+            this.countNewPatient.Size = new System.Drawing.Size(31, 19);
+            this.countNewPatient.TabIndex = 9;
+            this.countNewPatient.Text = "36";
             // 
             // label16
             // 
@@ -638,7 +638,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label countNewPatient;
+        private System.Windows.Forms.Label countAppoinmentToday;
     }
 }

@@ -69,6 +69,7 @@
             this.AddApoinment.TabIndex = 3;
             this.AddApoinment.Text = "Add";
             this.AddApoinment.UseVisualStyleBackColor = true;
+            this.AddApoinment.Click += new System.EventHandler(this.AddApoinment_Click);
             // 
             // DayBlank
             // 

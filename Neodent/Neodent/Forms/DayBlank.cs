@@ -24,7 +24,7 @@ namespace Neodent.Forms
             dayNumber.Text = day.ToString();
             _currentDate = date;
             if (_currentDate.ToShortDateString() == DateTime.Now.ToShortDateString())
-                BackColor = Color.FromArgb(222, 255, 159, 67);
+                BackColor = Color.Black;
 
             dayNumber.ForeColor = foreColor;
         }
@@ -34,6 +34,10 @@ namespace Neodent.Forms
             
         }
 
-        
+        private void AddApoinment_Click(object sender, EventArgs e)
+        {
+            EventForm eventForm = new EventForm();
+            eventForm.Show();
+        }
     }
 }

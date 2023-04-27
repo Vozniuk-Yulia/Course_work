@@ -39,23 +39,23 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.txtDetailPatientAllergies = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
+            this.txtDetailPatientRegisterData = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtDetailPatientGender = new System.Windows.Forms.Label();
+            this.txtDetailPatientAddress = new System.Windows.Forms.Label();
+            this.txtDetailPatientPhone = new System.Windows.Forms.Label();
+            this.txtDetailPatientBirthday = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtDetailPatientMiddlename = new System.Windows.Forms.Label();
+            this.txtDetailPatientSurname = new System.Windows.Forms.Label();
+            this.txtDetailPatientName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -155,22 +155,22 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.txtDetailPatientAllergies);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Location = new System.Drawing.Point(759, 289);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(331, 255);
             this.panel5.TabIndex = 2;
             // 
-            // label14
+            // txtDetailPatientAllergies
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(43, 70);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 63);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "- Приклад\r\n- Приклад\r\n- Приклад";
+            this.txtDetailPatientAllergies.AutoSize = true;
+            this.txtDetailPatientAllergies.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientAllergies.Location = new System.Drawing.Point(43, 70);
+            this.txtDetailPatientAllergies.Name = "txtDetailPatientAllergies";
+            this.txtDetailPatientAllergies.Size = new System.Drawing.Size(83, 63);
+            this.txtDetailPatientAllergies.TabIndex = 1;
+            this.txtDetailPatientAllergies.Text = "- Приклад\r\n- Приклад\r\n- Приклад";
             // 
             // label13
             // 
@@ -185,12 +185,12 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.txtDetailPatientRegisterData);
             this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.txtDetailPatientGender);
+            this.panel4.Controls.Add(this.txtDetailPatientAddress);
+            this.panel4.Controls.Add(this.txtDetailPatientPhone);
+            this.panel4.Controls.Add(this.txtDetailPatientBirthday);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
@@ -200,15 +200,15 @@
             this.panel4.Size = new System.Drawing.Size(641, 255);
             this.panel4.TabIndex = 1;
             // 
-            // label16
+            // txtDetailPatientRegisterData
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(460, 78);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(90, 21);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "14.01.2023";
+            this.txtDetailPatientRegisterData.AutoSize = true;
+            this.txtDetailPatientRegisterData.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientRegisterData.Location = new System.Drawing.Point(460, 78);
+            this.txtDetailPatientRegisterData.Name = "txtDetailPatientRegisterData";
+            this.txtDetailPatientRegisterData.Size = new System.Drawing.Size(90, 21);
+            this.txtDetailPatientRegisterData.TabIndex = 9;
+            this.txtDetailPatientRegisterData.Text = "14.01.2023";
             // 
             // label15
             // 
@@ -220,45 +220,45 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Дата реєстрації";
             // 
-            // label12
+            // txtDetailPatientGender
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(295, 183);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 21);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Жінка";
+            this.txtDetailPatientGender.AutoSize = true;
+            this.txtDetailPatientGender.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientGender.Location = new System.Drawing.Point(295, 183);
+            this.txtDetailPatientGender.Name = "txtDetailPatientGender";
+            this.txtDetailPatientGender.Size = new System.Drawing.Size(53, 21);
+            this.txtDetailPatientGender.TabIndex = 7;
+            this.txtDetailPatientGender.Text = "Жінка";
             // 
-            // label11
+            // txtDetailPatientAddress
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(295, 79);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 21);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Соборна 33";
+            this.txtDetailPatientAddress.AutoSize = true;
+            this.txtDetailPatientAddress.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientAddress.Location = new System.Drawing.Point(295, 79);
+            this.txtDetailPatientAddress.Name = "txtDetailPatientAddress";
+            this.txtDetailPatientAddress.Size = new System.Drawing.Size(98, 21);
+            this.txtDetailPatientAddress.TabIndex = 6;
+            this.txtDetailPatientAddress.Text = "Соборна 33";
             // 
-            // label10
+            // txtDetailPatientPhone
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(37, 183);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 21);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "+3806893485726";
+            this.txtDetailPatientPhone.AutoSize = true;
+            this.txtDetailPatientPhone.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientPhone.Location = new System.Drawing.Point(37, 183);
+            this.txtDetailPatientPhone.Name = "txtDetailPatientPhone";
+            this.txtDetailPatientPhone.Size = new System.Drawing.Size(136, 21);
+            this.txtDetailPatientPhone.TabIndex = 5;
+            this.txtDetailPatientPhone.Text = "+3806893485726";
             // 
-            // label9
+            // txtDetailPatientBirthday
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(37, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 21);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "12.12.2000";
+            this.txtDetailPatientBirthday.AutoSize = true;
+            this.txtDetailPatientBirthday.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientBirthday.Location = new System.Drawing.Point(37, 79);
+            this.txtDetailPatientBirthday.Name = "txtDetailPatientBirthday";
+            this.txtDetailPatientBirthday.Size = new System.Drawing.Size(90, 21);
+            this.txtDetailPatientBirthday.TabIndex = 4;
+            this.txtDetailPatientBirthday.Text = "12.12.2000";
             // 
             // label8
             // 
@@ -303,44 +303,44 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtDetailPatientMiddlename);
+            this.panel3.Controls.Add(this.txtDetailPatientSurname);
+            this.panel3.Controls.Add(this.txtDetailPatientName);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(37, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(292, 230);
             this.panel3.TabIndex = 0;
             // 
-            // label4
+            // txtDetailPatientMiddlename
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(81, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "По-батькові";
+            this.txtDetailPatientMiddlename.AutoSize = true;
+            this.txtDetailPatientMiddlename.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientMiddlename.Location = new System.Drawing.Point(81, 187);
+            this.txtDetailPatientMiddlename.Name = "txtDetailPatientMiddlename";
+            this.txtDetailPatientMiddlename.Size = new System.Drawing.Size(128, 25);
+            this.txtDetailPatientMiddlename.TabIndex = 0;
+            this.txtDetailPatientMiddlename.Text = "По-батькові";
             // 
-            // label3
+            // txtDetailPatientSurname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(156, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Прізвище";
+            this.txtDetailPatientSurname.AutoSize = true;
+            this.txtDetailPatientSurname.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientSurname.Location = new System.Drawing.Point(156, 147);
+            this.txtDetailPatientSurname.Name = "txtDetailPatientSurname";
+            this.txtDetailPatientSurname.Size = new System.Drawing.Size(103, 25);
+            this.txtDetailPatientSurname.TabIndex = 2;
+            this.txtDetailPatientSurname.Text = "Прізвище";
             // 
-            // label2
+            // txtDetailPatientName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(54, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ім\'я";
+            this.txtDetailPatientName.AutoSize = true;
+            this.txtDetailPatientName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtDetailPatientName.Location = new System.Drawing.Point(54, 147);
+            this.txtDetailPatientName.Name = "txtDetailPatientName";
+            this.txtDetailPatientName.Size = new System.Drawing.Size(50, 25);
+            this.txtDetailPatientName.TabIndex = 1;
+            this.txtDetailPatientName.Text = "Ім\'я";
             // 
             // pictureBox1
             // 
@@ -361,6 +361,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailsPatientForm";
             this.Text = "DetailsPatientForm";
+            this.Load += new System.EventHandler(this.DetailsPatientForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
@@ -378,24 +379,24 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txtDetailPatientMiddlename;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtDetailPatientSurname;
+        private System.Windows.Forms.Label txtDetailPatientName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label txtDetailPatientAllergies;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label txtDetailPatientGender;
+        private System.Windows.Forms.Label txtDetailPatientAddress;
+        private System.Windows.Forms.Label txtDetailPatientPhone;
+        private System.Windows.Forms.Label txtDetailPatientBirthday;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label txtDetailPatientRegisterData;
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

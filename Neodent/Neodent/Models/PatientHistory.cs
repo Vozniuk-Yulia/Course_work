@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Neodent.Models
 {
     [Alias("patientsHistory")]
-    internal class PatientHistory
+    public class PatientHistory
     {
         [AutoIncrement, PrimaryKey]
         public int Id { get; set; }
@@ -17,9 +17,9 @@ namespace Neodent.Models
         public int CountOfTeeth { get; set; }
         public int Price { get; set; }
         public Medicine Medicines { get; set; }
+       
         public string Notes { get; set; }
-        [ForeignKey(typeof(Patient), OnDelete = "CASCADE")]
-        public int PatientId { get; set; }
-
+        public int PatientID { get; set; }
+        public Patient Patient { get; set; }
     }
 }

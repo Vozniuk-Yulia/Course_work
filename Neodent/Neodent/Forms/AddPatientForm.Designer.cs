@@ -34,29 +34,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtPatientName = new System.Windows.Forms.TextBox();
+            this.txtPatientSurname = new System.Windows.Forms.TextBox();
+            this.txtPatientMiddlename = new System.Windows.Forms.TextBox();
+            this.txtPatientRegisterData = new System.Windows.Forms.TextBox();
+            this.txtPatientBirthday = new System.Windows.Forms.TextBox();
+            this.Save = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtPatientLastVisit = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtPatientAllergies = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.txtPatientPhone = new System.Windows.Forms.TextBox();
+            this.txtPatientBloodType = new System.Windows.Forms.TextBox();
+            this.txtPatientAddress = new System.Windows.Forms.TextBox();
+            this.malePatient = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(25, 174);
+            this.label2.Location = new System.Drawing.Point(26, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 17);
             this.label2.TabIndex = 1;
@@ -86,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(25, 259);
+            this.label3.Location = new System.Drawing.Point(26, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 2;
@@ -98,7 +94,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(391, 301);
+            this.label4.Location = new System.Drawing.Point(387, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 3;
@@ -109,7 +105,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(25, 217);
+            this.label5.Location = new System.Drawing.Point(26, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 17);
             this.label5.TabIndex = 4;
@@ -120,130 +116,110 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(25, 301);
+            this.label6.Location = new System.Drawing.Point(26, 196);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Дата народження";
             // 
-            // textBox1
+            // txtPatientName
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 172);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 26);
-            this.textBox1.TabIndex = 6;
+            this.txtPatientName.Location = new System.Drawing.Point(168, 67);
+            this.txtPatientName.Multiline = true;
+            this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientName.TabIndex = 6;
             // 
-            // textBox2
+            // txtPatientSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 214);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 26);
-            this.textBox2.TabIndex = 7;
+            this.txtPatientSurname.Location = new System.Drawing.Point(168, 109);
+            this.txtPatientSurname.Multiline = true;
+            this.txtPatientSurname.Name = "txtPatientSurname";
+            this.txtPatientSurname.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientSurname.TabIndex = 7;
             // 
-            // textBox3
+            // txtPatientMiddlename
             // 
-            this.textBox3.Location = new System.Drawing.Point(167, 256);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(202, 26);
-            this.textBox3.TabIndex = 8;
+            this.txtPatientMiddlename.Location = new System.Drawing.Point(168, 151);
+            this.txtPatientMiddlename.Multiline = true;
+            this.txtPatientMiddlename.Name = "txtPatientMiddlename";
+            this.txtPatientMiddlename.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientMiddlename.TabIndex = 8;
             // 
-            // textBox4
+            // txtPatientRegisterData
             // 
-            this.textBox4.Location = new System.Drawing.Point(167, 340);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(202, 26);
-            this.textBox4.TabIndex = 9;
+            this.txtPatientRegisterData.Location = new System.Drawing.Point(168, 235);
+            this.txtPatientRegisterData.Multiline = true;
+            this.txtPatientRegisterData.Name = "txtPatientRegisterData";
+            this.txtPatientRegisterData.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientRegisterData.TabIndex = 9;
             // 
-            // textBox5
+            // txtPatientBirthday
             // 
-            this.textBox5.Location = new System.Drawing.Point(167, 298);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 26);
-            this.textBox5.TabIndex = 10;
+            this.txtPatientBirthday.Location = new System.Drawing.Point(168, 193);
+            this.txtPatientBirthday.Multiline = true;
+            this.txtPatientBirthday.Name = "txtPatientBirthday";
+            this.txtPatientBirthday.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientBirthday.TabIndex = 10;
             // 
-            // button1
+            // Save
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(581, 494);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 33);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Зберегти";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Save.BackColor = System.Drawing.Color.Black;
+            this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.ForeColor = System.Drawing.Color.White;
+            this.Save.Location = new System.Drawing.Point(577, 370);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(111, 33);
+            this.Save.TabIndex = 11;
+            this.Save.Text = "Зберегти";
+            this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(391, 174);
+            this.label7.Location = new System.Drawing.Point(387, 71);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Останій візит";
             // 
-            // textBox6
+            // txtPatientLastVisit
             // 
-            this.textBox6.Location = new System.Drawing.Point(490, 172);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(202, 26);
-            this.textBox6.TabIndex = 13;
+            this.txtPatientLastVisit.Location = new System.Drawing.Point(486, 69);
+            this.txtPatientLastVisit.Multiline = true;
+            this.txtPatientLastVisit.Name = "txtPatientLastVisit";
+            this.txtPatientLastVisit.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientLastVisit.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(25, 385);
+            this.label8.Location = new System.Drawing.Point(26, 280);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 17);
             this.label8.TabIndex = 14;
             this.label8.Text = "Алергії";
             // 
-            // textBox7
+            // txtPatientAllergies
             // 
-            this.textBox7.Location = new System.Drawing.Point(167, 382);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(202, 78);
-            this.textBox7.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(25, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 17);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Фото";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(167, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.txtPatientAllergies.Location = new System.Drawing.Point(168, 277);
+            this.txtPatientAllergies.Multiline = true;
+            this.txtPatientAllergies.Name = "txtPatientAllergies";
+            this.txtPatientAllergies.Size = new System.Drawing.Size(202, 78);
+            this.txtPatientAllergies.TabIndex = 15;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(391, 217);
+            this.label10.Location = new System.Drawing.Point(387, 114);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 17);
             this.label10.TabIndex = 19;
@@ -254,7 +230,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(25, 343);
+            this.label11.Location = new System.Drawing.Point(26, 238);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 17);
             this.label11.TabIndex = 20;
@@ -265,7 +241,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(391, 259);
+            this.label12.Location = new System.Drawing.Point(387, 156);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 17);
             this.label12.TabIndex = 21;
@@ -276,64 +252,53 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(391, 343);
+            this.label13.Location = new System.Drawing.Point(387, 240);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(42, 17);
             this.label13.TabIndex = 22;
             this.label13.Text = "Стать";
             // 
-            // textBox8
+            // txtPatientPhone
             // 
-            this.textBox8.Location = new System.Drawing.Point(490, 214);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(202, 26);
-            this.textBox8.TabIndex = 23;
+            this.txtPatientPhone.Location = new System.Drawing.Point(486, 111);
+            this.txtPatientPhone.Multiline = true;
+            this.txtPatientPhone.Name = "txtPatientPhone";
+            this.txtPatientPhone.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientPhone.TabIndex = 23;
             // 
-            // textBox9
+            // txtPatientBloodType
             // 
-            this.textBox9.Location = new System.Drawing.Point(490, 256);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(202, 26);
-            this.textBox9.TabIndex = 24;
+            this.txtPatientBloodType.Location = new System.Drawing.Point(486, 153);
+            this.txtPatientBloodType.Multiline = true;
+            this.txtPatientBloodType.Name = "txtPatientBloodType";
+            this.txtPatientBloodType.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientBloodType.TabIndex = 24;
             // 
-            // textBox10
+            // txtPatientAddress
             // 
-            this.textBox10.Location = new System.Drawing.Point(490, 298);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(202, 26);
-            this.textBox10.TabIndex = 25;
+            this.txtPatientAddress.Location = new System.Drawing.Point(486, 195);
+            this.txtPatientAddress.Multiline = true;
+            this.txtPatientAddress.Name = "txtPatientAddress";
+            this.txtPatientAddress.Size = new System.Drawing.Size(202, 26);
+            this.txtPatientAddress.TabIndex = 25;
             // 
-            // button2
+            // malePatient
             // 
-            this.button2.BackgroundImage = global::Neodent.Properties.Resources.mathematics_sign_plus_round_icon;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(276, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 27;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton1.Location = new System.Drawing.Point(490, 341);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 17);
-            this.radioButton1.TabIndex = 28;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Чоловік";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.malePatient.AutoSize = true;
+            this.malePatient.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.malePatient.Location = new System.Drawing.Point(486, 238);
+            this.malePatient.Name = "malePatient";
+            this.malePatient.Size = new System.Drawing.Size(65, 17);
+            this.malePatient.TabIndex = 28;
+            this.malePatient.TabStop = true;
+            this.malePatient.Text = "Чоловік";
+            this.malePatient.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton2.Location = new System.Drawing.Point(636, 341);
+            this.radioButton2.Location = new System.Drawing.Point(632, 238);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(56, 17);
             this.radioButton2.TabIndex = 29;
@@ -346,29 +311,26 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(700, 540);
+            this.ClientSize = new System.Drawing.Size(700, 411);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.malePatient);
+            this.Controls.Add(this.txtPatientAddress);
+            this.Controls.Add(this.txtPatientBloodType);
+            this.Controls.Add(this.txtPatientPhone);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtPatientAllergies);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtPatientLastVisit);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Save);
+            this.Controls.Add(this.txtPatientBirthday);
+            this.Controls.Add(this.txtPatientRegisterData);
+            this.Controls.Add(this.txtPatientMiddlename);
+            this.Controls.Add(this.txtPatientSurname);
+            this.Controls.Add(this.txtPatientName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -378,7 +340,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.Name = "AddPatientForm";
             this.Text = "AddPatientForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.AddPatientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,27 +354,24 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPatientName;
+        private System.Windows.Forms.TextBox txtPatientSurname;
+        private System.Windows.Forms.TextBox txtPatientMiddlename;
+        private System.Windows.Forms.TextBox txtPatientRegisterData;
+        private System.Windows.Forms.TextBox txtPatientBirthday;
+        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPatientLastVisit;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtPatientAllergies;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txtPatientPhone;
+        private System.Windows.Forms.TextBox txtPatientBloodType;
+        private System.Windows.Forms.TextBox txtPatientAddress;
+        private System.Windows.Forms.RadioButton malePatient;
         private System.Windows.Forms.RadioButton radioButton2;
     }
 }

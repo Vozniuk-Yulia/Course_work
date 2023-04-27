@@ -1,4 +1,5 @@
-﻿using Neodent.Models;
+﻿using Neodent.Context;
+using Neodent.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace Neodent.Forms
         public PatientsForm()
         {
             InitializeComponent();
-            bunifuCustomDataGrid1.Rows.Add(
+            patientsDataGrid1.Rows.Add(
                 new object[]
                 {"Voznyuk",
                 "Yulia",
@@ -24,7 +25,7 @@ namespace Neodent.Forms
                 "20.10.2004"});
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void addNewPatient_Click(object sender, EventArgs e)
         {
             //this.Hide();
             AddPatientForm addPatientForm = new AddPatientForm();
@@ -53,10 +54,38 @@ namespace Neodent.Forms
         }
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(bunifuCustomDataGrid1.Columns[e.ColumnIndex].Name== "buttonDetail")
+            DetailsPatientForm detailPatientForm = new DetailsPatientForm();
+
+            if (patientsDataGrid1.Columns[e.ColumnIndex].Name == "buttonDetail")
             {
-                ContainerControl(new DetailsPatientForm());
+                int selectedId = Convert.ToInt32(patientsDataGrid1.CurrentRow.Cells["Id"].Value);
+                using (var dbContext = new DentistryDBContext())
+                {
+                    var patient = dbContext.Patients.Where(d => d.Id == selectedId).Select(c => new User()
+                    {
+                        Id = c.Id,
+                        Name = c.User.Name,
+                        Surname = c.User.Surname,
+                        Middlename = c.User.Middlename,
+                        Birthday = c.User.Birthday.Date,
+                        Phone = c.User.Phone,
+                        Address = c.User.Address,
+                        Gender = c.User.Gender,
+                        Patient = c.User.Patient
+                    }).FirstOrDefault();
+                    detailPatientForm.PatientName = patient.Name;
+                    detailPatientForm.PatientSurname = patient.Surname;
+                    detailPatientForm.PatientMiddlename = patient.Middlename;
+                    detailPatientForm.PatientBirthday = patient.Birthday.Date;
+                    detailPatientForm.PatientPhone = patient.Phone;
+                    detailPatientForm.PatientAddress = patient.Address;
+                    detailPatientForm.PatientGender = patient.Gender;
+                    detailPatientForm.PatientDataRegistration = patient.Patient.RegistratedDate;
+                    detailPatientForm.PatientAllergies = patient.Patient.Allergies;
+                }
+                ContainerControl(detailPatientForm);
             }
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -70,20 +99,51 @@ namespace Neodent.Forms
 
         private void PatientsForm_Load(object sender, EventArgs e)
         {
-            List<Patient> patients = new List<Patient>();
-            for(int i = 0; i < 10; i++)
+            LoadData();
+        }
+        private void LoadData()
+        {
+            using (var dbContext = new DentistryDBContext())
             {
-                patients.Add(new Patient
-                    { 
-                    Name= "Yulia",
-                    Surname= "Voznyuk",
-                    Phone= "0681925839",
-                    Birthday=DateTime.Now
 
-                });
+                var patients = dbContext.Patients
+                .Select(c => new User()
+                {
+                    Id = c.Id,
+                    Name = c.User.Name,
+                    Surname = c.User.Surname,
+                    Middlename = c.User.Middlename,
+                    Address = c.User.Address,
+                    Phone = c.User.Phone,
+                    Gender = c.User.Gender,
+                    Dentist = c.User.Dentist,
+                    Birthday = c.User.Birthday,
+                })
+                .ToList();
+                foreach (var patient in patients)
+                {
+                    patientsDataGrid1.Rows.Add(new object[]
+                    {
+                        patient.Id,
+                        patient.Name,
+                        patient.Surname,
+                        patient.Phone,
+                        patient.Birthday
+                    });
+                }
             }
-           
+        }
 
+        private void removePatient_Click(object sender, EventArgs e)
+        {
+            int selectedId = Convert.ToInt32(patientsDataGrid1.CurrentRow.Cells["Id"].Value);
+            using (var dbContext = new DentistryDBContext())
+            {
+                var patient = dbContext.Patients.Where(d => d.Id == selectedId).FirstOrDefault();
+                dbContext.Patients.Remove(patient);
+                dbContext.SaveChanges();
+            }
+            MessageBox.Show("Видаленно успішно");
         }
     }
 }

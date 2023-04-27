@@ -15,8 +15,8 @@ namespace Neodent.Forms
         private CustomCalendar _calendar;
         private int _selectedMonth;
 
-        private Color ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 107, 107);
-        private Color NOT_ACTIVE_COLOR = Color.FromArgb(84, 160, 255);
+        private Color ACTIVE_BUTTON_COLOR = Color.DarkGray;
+        private Color NOT_ACTIVE_COLOR = Color.Gray;
         public ScheduleForm()
         {
             InitializeComponent();

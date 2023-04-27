@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Neodent.Models
 {
     [Alias("medicines")]
-    internal class Medicine
+    public class Medicine
     {
         [AutoIncrement, PrimaryKey]
         public int Id { get; set; }

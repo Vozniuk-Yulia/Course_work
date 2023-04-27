@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.addEvent = new System.Windows.Forms.Button();
+            this.listOfPatients = new System.Windows.Forms.ComboBox();
+            this.listOfDentists = new System.Windows.Forms.ComboBox();
+            this.listOfServices = new System.Windows.Forms.ComboBox();
+            this.dateAppoinment = new System.Windows.Forms.DateTimePicker();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.startTimeAppoinment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -46,60 +51,91 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Додати запис";
             // 
-            // button1
+            // addEvent
             // 
-            this.button1.Location = new System.Drawing.Point(37, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 22);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Додати";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addEvent.Location = new System.Drawing.Point(263, 339);
+            this.addEvent.Name = "addEvent";
+            this.addEvent.Size = new System.Drawing.Size(89, 32);
+            this.addEvent.TabIndex = 4;
+            this.addEvent.Text = "Додати";
+            this.addEvent.UseVisualStyleBackColor = true;
+            this.addEvent.Click += new System.EventHandler(this.addEvent_Click);
             // 
-            // comboBox1
+            // listOfPatients
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(37, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(315, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "Вибрати клієнта";
+            this.listOfPatients.FormattingEnabled = true;
+            this.listOfPatients.Location = new System.Drawing.Point(37, 73);
+            this.listOfPatients.Name = "listOfPatients";
+            this.listOfPatients.Size = new System.Drawing.Size(315, 21);
+            this.listOfPatients.TabIndex = 5;
+            this.listOfPatients.Text = "Вибрати клієнта";
             // 
-            // comboBox2
+            // listOfDentists
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(37, 120);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(315, 21);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.Text = "Вибрати лікаря";
+            this.listOfDentists.FormattingEnabled = true;
+            this.listOfDentists.Location = new System.Drawing.Point(37, 120);
+            this.listOfDentists.Name = "listOfDentists";
+            this.listOfDentists.Size = new System.Drawing.Size(315, 21);
+            this.listOfDentists.TabIndex = 6;
+            this.listOfDentists.Text = "Вибрати лікаря";
             // 
-            // comboBox3
+            // listOfServices
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(37, 165);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(315, 21);
-            this.comboBox3.TabIndex = 7;
-            this.comboBox3.Text = "Вибрати послугу";
+            this.listOfServices.FormattingEnabled = true;
+            this.listOfServices.Location = new System.Drawing.Point(37, 165);
+            this.listOfServices.Name = "listOfServices";
+            this.listOfServices.Size = new System.Drawing.Size(315, 21);
+            this.listOfServices.TabIndex = 7;
+            this.listOfServices.Text = "Вибрати послугу";
             // 
-            // dateTimePicker1
+            // dateAppoinment
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(45, 218);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
-            this.dateTimePicker1.TabIndex = 8;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateAppoinment.Location = new System.Drawing.Point(37, 242);
+            this.dateAppoinment.Name = "dateAppoinment";
+            this.dateAppoinment.Size = new System.Drawing.Size(83, 20);
+            this.dateAppoinment.TabIndex = 8;
+            this.dateAppoinment.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 207);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Дата";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(188, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Години";
+            // 
+            // startTimeAppoinment
+            // 
+            this.startTimeAppoinment.Location = new System.Drawing.Point(191, 237);
+            this.startTimeAppoinment.Multiline = true;
+            this.startTimeAppoinment.Name = "startTimeAppoinment";
+            this.startTimeAppoinment.Size = new System.Drawing.Size(158, 25);
+            this.startTimeAppoinment.TabIndex = 11;
+            this.startTimeAppoinment.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 395);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.startTimeAppoinment);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateAppoinment);
+            this.Controls.Add(this.listOfServices);
+            this.Controls.Add(this.listOfDentists);
+            this.Controls.Add(this.listOfPatients);
+            this.Controls.Add(this.addEvent);
             this.Controls.Add(this.label1);
             this.Name = "EventForm";
             this.Text = "EventForm";
@@ -111,10 +147,14 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button addEvent;
+        private System.Windows.Forms.ComboBox listOfPatients;
+        private System.Windows.Forms.ComboBox listOfDentists;
+        private System.Windows.Forms.ComboBox listOfServices;
+        private System.Windows.Forms.DateTimePicker dateAppoinment;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox startTimeAppoinment;
     }
 }

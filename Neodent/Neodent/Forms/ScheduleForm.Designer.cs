@@ -120,108 +120,108 @@
             // 
             // decemberButton
             // 
-            this.decemberButton.Location = new System.Drawing.Point(89, 520);
+            this.decemberButton.Location = new System.Drawing.Point(53, 512);
             this.decemberButton.Name = "decemberButton";
-            this.decemberButton.Size = new System.Drawing.Size(73, 21);
+            this.decemberButton.Size = new System.Drawing.Size(140, 40);
             this.decemberButton.TabIndex = 12;
             this.decemberButton.Text = "Грудень";
             this.decemberButton.UseVisualStyleBackColor = true;
             // 
             // novemberButton
             // 
-            this.novemberButton.Location = new System.Drawing.Point(89, 470);
+            this.novemberButton.Location = new System.Drawing.Point(53, 466);
             this.novemberButton.Name = "novemberButton";
-            this.novemberButton.Size = new System.Drawing.Size(85, 33);
+            this.novemberButton.Size = new System.Drawing.Size(140, 40);
             this.novemberButton.TabIndex = 11;
             this.novemberButton.Text = "Листопад";
             this.novemberButton.UseVisualStyleBackColor = true;
             // 
             // octoberButton
             // 
-            this.octoberButton.Location = new System.Drawing.Point(70, 427);
+            this.octoberButton.Location = new System.Drawing.Point(53, 420);
             this.octoberButton.Name = "octoberButton";
-            this.octoberButton.Size = new System.Drawing.Size(92, 37);
+            this.octoberButton.Size = new System.Drawing.Size(140, 40);
             this.octoberButton.TabIndex = 10;
             this.octoberButton.Text = "Жовтень";
             this.octoberButton.UseVisualStyleBackColor = true;
             // 
             // septemberButton
             // 
-            this.septemberButton.Location = new System.Drawing.Point(74, 371);
+            this.septemberButton.Location = new System.Drawing.Point(53, 374);
             this.septemberButton.Name = "septemberButton";
-            this.septemberButton.Size = new System.Drawing.Size(88, 40);
+            this.septemberButton.Size = new System.Drawing.Size(140, 40);
             this.septemberButton.TabIndex = 9;
             this.septemberButton.Text = "Вересень";
             this.septemberButton.UseVisualStyleBackColor = true;
             // 
             // augustButton
             // 
-            this.augustButton.Location = new System.Drawing.Point(78, 320);
+            this.augustButton.Location = new System.Drawing.Point(53, 328);
             this.augustButton.Name = "augustButton";
-            this.augustButton.Size = new System.Drawing.Size(90, 45);
+            this.augustButton.Size = new System.Drawing.Size(140, 40);
             this.augustButton.TabIndex = 8;
             this.augustButton.Text = "Серпень";
             this.augustButton.UseVisualStyleBackColor = true;
             // 
             // julyButton
             // 
-            this.julyButton.Location = new System.Drawing.Point(62, 286);
+            this.julyButton.Location = new System.Drawing.Point(53, 282);
             this.julyButton.Name = "julyButton";
-            this.julyButton.Size = new System.Drawing.Size(100, 28);
+            this.julyButton.Size = new System.Drawing.Size(140, 40);
             this.julyButton.TabIndex = 7;
             this.julyButton.Text = "Липень";
             this.julyButton.UseVisualStyleBackColor = true;
             // 
             // juneButton
             // 
-            this.juneButton.Location = new System.Drawing.Point(70, 240);
+            this.juneButton.Location = new System.Drawing.Point(53, 236);
             this.juneButton.Name = "juneButton";
-            this.juneButton.Size = new System.Drawing.Size(98, 40);
+            this.juneButton.Size = new System.Drawing.Size(140, 40);
             this.juneButton.TabIndex = 6;
             this.juneButton.Text = "Червень";
             this.juneButton.UseVisualStyleBackColor = true;
             // 
             // mayButton
             // 
-            this.mayButton.Location = new System.Drawing.Point(67, 190);
+            this.mayButton.Location = new System.Drawing.Point(53, 190);
             this.mayButton.Name = "mayButton";
-            this.mayButton.Size = new System.Drawing.Size(103, 40);
+            this.mayButton.Size = new System.Drawing.Size(140, 40);
             this.mayButton.TabIndex = 5;
             this.mayButton.Text = "Травень";
             this.mayButton.UseVisualStyleBackColor = true;
             // 
             // aprilButton
             // 
-            this.aprilButton.Location = new System.Drawing.Point(62, 144);
+            this.aprilButton.Location = new System.Drawing.Point(53, 144);
             this.aprilButton.Name = "aprilButton";
-            this.aprilButton.Size = new System.Drawing.Size(111, 40);
+            this.aprilButton.Size = new System.Drawing.Size(140, 40);
             this.aprilButton.TabIndex = 4;
             this.aprilButton.Text = "Квітень";
             this.aprilButton.UseVisualStyleBackColor = true;
             // 
             // marchButton
             // 
-            this.marchButton.Location = new System.Drawing.Point(62, 98);
+            this.marchButton.Location = new System.Drawing.Point(53, 98);
             this.marchButton.Name = "marchButton";
-            this.marchButton.Size = new System.Drawing.Size(106, 40);
+            this.marchButton.Size = new System.Drawing.Size(140, 40);
             this.marchButton.TabIndex = 3;
             this.marchButton.Text = "Березень";
             this.marchButton.UseVisualStyleBackColor = true;
             // 
             // februaryButton
             // 
-            this.februaryButton.Location = new System.Drawing.Point(62, 52);
+            this.februaryButton.Location = new System.Drawing.Point(53, 52);
             this.februaryButton.Name = "februaryButton";
-            this.februaryButton.Size = new System.Drawing.Size(112, 40);
+            this.februaryButton.Size = new System.Drawing.Size(140, 40);
             this.februaryButton.TabIndex = 2;
             this.februaryButton.Text = "Лютий";
             this.februaryButton.UseVisualStyleBackColor = true;
             // 
             // januaryButton
             // 
-            this.januaryButton.Location = new System.Drawing.Point(67, 6);
+            this.januaryButton.Location = new System.Drawing.Point(53, 6);
             this.januaryButton.Name = "januaryButton";
-            this.januaryButton.Size = new System.Drawing.Size(106, 40);
+            this.januaryButton.Size = new System.Drawing.Size(140, 40);
             this.januaryButton.TabIndex = 1;
             this.januaryButton.Text = "Січень";
             this.januaryButton.UseVisualStyleBackColor = true;

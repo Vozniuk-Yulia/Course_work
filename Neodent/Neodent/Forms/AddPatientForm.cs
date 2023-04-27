@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Neodent.Context;
+using Neodent.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,30 +14,55 @@ namespace Neodent.Forms
 {
     public partial class AddPatientForm : Form
     {
-        private string imageLocation;
+        private string gender;
         public AddPatientForm()
         {
             InitializeComponent();
         }
-
-        
-
-        private void button2_Click_1(object sender, EventArgs e)
+        public string GendreChoice()
         {
-            try
+            if (malePatient.Checked)
             {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*";
-                if (dialog.ShowDialog() == DialogResult.OK)
+                gender = "Чоловiк";
+            }
+            else
+            {
+                gender = "Жiнка";
+            }
+            return gender;
+        }
+        private void AddPatientForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            Patient patient = new Patient()
+            {
+                User = new User()
                 {
-                    imageLocation = dialog.FileName;
-                    pictureBox1.ImageLocation = imageLocation;
-                }
-            }
-            catch (Exception ex)
+                    Name = txtPatientName.Text,
+                    Surname = txtPatientSurname.Text,
+                    Middlename = txtPatientMiddlename.Text,
+                    Birthday = DateTime.Parse(txtPatientBirthday.Text),
+                    Phone = txtPatientPhone.Text,
+                    Address = txtPatientAddress.Text,
+                    Gender = GendreChoice(),
+                },
+                RegistratedDate= DateTime.Parse(txtPatientRegisterData.Text),
+                Allergies=txtPatientAllergies.Text,
+                LastVisit= DateTime.Parse(txtPatientLastVisit.Text),
+                BloodType=txtPatientBloodType.Text
+               
+            };
+            using (var dbContext = new DentistryDBContext())
             {
-                MessageBox.Show(ex.Message);
+                dbContext.Patients.Add(patient);
+                dbContext.SaveChanges();
             }
+            MessageBox.Show("Додано успішно");
+            this.Close();
         }
     }
 }
