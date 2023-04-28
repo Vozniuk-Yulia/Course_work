@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientsForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ViewPatientHistory = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.removePatient = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.ViewPatientHistory);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.removePatient);
             this.panel1.Controls.Add(this.button2);
@@ -67,16 +67,16 @@
             this.panel1.Size = new System.Drawing.Size(1148, 53);
             this.panel1.TabIndex = 0;
             // 
-            // button4
+            // ViewPatientHistory
             // 
-            this.button4.BackgroundImage = global::Neodent.Properties.Resources.medical_history_icon;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(907, 11);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(37, 42);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.ViewPatientHistory.BackgroundImage = global::Neodent.Properties.Resources.medical_history_icon;
+            this.ViewPatientHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ViewPatientHistory.Location = new System.Drawing.Point(907, 11);
+            this.ViewPatientHistory.Name = "ViewPatientHistory";
+            this.ViewPatientHistory.Size = new System.Drawing.Size(37, 42);
+            this.ViewPatientHistory.TabIndex = 4;
+            this.ViewPatientHistory.UseVisualStyleBackColor = true;
+            this.ViewPatientHistory.Click += new System.EventHandler(this.ViewPatientHistory_Click);
             // 
             // label1
             // 
@@ -123,21 +123,21 @@
             // 
             // patientsDataGrid1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.patientsDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.patientsDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.patientsDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.patientsDataGrid1.BackgroundColor = System.Drawing.Color.White;
             this.patientsDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.patientsDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.patientsDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.patientsDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.patientsDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.patientsDataGrid1.ColumnHeadersHeight = 50;
             this.patientsDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -146,14 +146,14 @@
             this.Column3,
             this.Column4,
             this.buttonDetail});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.patientsDataGrid1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.patientsDataGrid1.DefaultCellStyle = dataGridViewCellStyle3;
             this.patientsDataGrid1.DoubleBuffered = true;
             this.patientsDataGrid1.EnableHeadersVisualStyles = false;
             this.patientsDataGrid1.GridColor = System.Drawing.SystemColors.Control;
@@ -168,7 +168,7 @@
             this.patientsDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.patientsDataGrid1.Size = new System.Drawing.Size(1084, 523);
             this.patientsDataGrid1.TabIndex = 3;
-            this.patientsDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
+            this.patientsDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientsDataGrid1_CellContentClick);
             // 
             // Id
             // 
@@ -261,7 +261,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button ViewPatientHistory;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

@@ -14,6 +14,7 @@ namespace Neodent.Forms
 {
     public partial class PatientsForm : Form
     {
+        public int selectedId;
         public PatientsForm()
         {
             InitializeComponent();
@@ -52,13 +53,13 @@ namespace Neodent.Forms
             panel2.Tag = fm;
             fm.Show();
         }
-        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void patientsDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DetailsPatientForm detailPatientForm = new DetailsPatientForm();
 
             if (patientsDataGrid1.Columns[e.ColumnIndex].Name == "buttonDetail")
             {
-                int selectedId = Convert.ToInt32(patientsDataGrid1.CurrentRow.Cells["Id"].Value);
+                selectedId = Convert.ToInt32(patientsDataGrid1.CurrentRow.Cells["Id"].Value);
                 using (var dbContext = new DentistryDBContext())
                 {
                     var patient = dbContext.Patients.Where(d => d.Id == selectedId).Select(c => new User()
@@ -88,11 +89,28 @@ namespace Neodent.Forms
            
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void ViewPatientHistory_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             panel2.Controls.Clear();
             PatientHistoryForm patientHistoryForm = new PatientHistoryForm();
+            selectedId = Convert.ToInt32(patientsDataGrid1.CurrentRow.Cells["Id"].Value);
+            using (var dbContext = new DentistryDBContext())
+            {
+                var patient = dbContext.Patients.Where(d => d.Id == selectedId).Select(c => new User()
+                {
+                    Id = c.Id,
+                    Name = c.User.Name,
+                    Surname = c.User.Surname,
+                    Middlename = c.User.Middlename,
+
+                    Patient = c.User.Patient
+                }).FirstOrDefault();
+                patientHistoryForm.PatientHistoryName = patient.Name;
+                patientHistoryForm.PatientHistorySurname = patient.Surname;
+                patientHistoryForm.PatientHistoryMiddlename = patient.Middlename;
+              
+            }
             ContainerControl(patientHistoryForm);
 
         }

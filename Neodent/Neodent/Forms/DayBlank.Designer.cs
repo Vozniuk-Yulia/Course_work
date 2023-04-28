@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.dayNumber = new System.Windows.Forms.Label();
-            this.activeAppoinment = new System.Windows.Forms.Panel();
-            this.passiveAppoinment = new System.Windows.Forms.Panel();
             this.AddApoinment = new System.Windows.Forms.Button();
+            this.CountOfDayAppointment = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dayNumber
@@ -45,51 +44,48 @@
             this.dayNumber.Text = "01";
             this.dayNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // activeAppoinment
-            // 
-            this.activeAppoinment.Dock = System.Windows.Forms.DockStyle.Right;
-            this.activeAppoinment.Location = new System.Drawing.Point(139, 0);
-            this.activeAppoinment.Name = "activeAppoinment";
-            this.activeAppoinment.Size = new System.Drawing.Size(31, 100);
-            this.activeAppoinment.TabIndex = 1;
-            // 
-            // passiveAppoinment
-            // 
-            this.passiveAppoinment.Dock = System.Windows.Forms.DockStyle.Right;
-            this.passiveAppoinment.Location = new System.Drawing.Point(110, 0);
-            this.passiveAppoinment.Name = "passiveAppoinment";
-            this.passiveAppoinment.Size = new System.Drawing.Size(29, 100);
-            this.passiveAppoinment.TabIndex = 2;
-            // 
             // AddApoinment
             // 
-            this.AddApoinment.Location = new System.Drawing.Point(22, 61);
+            this.AddApoinment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddApoinment.Location = new System.Drawing.Point(6, 63);
             this.AddApoinment.Name = "AddApoinment";
             this.AddApoinment.Size = new System.Drawing.Size(41, 28);
             this.AddApoinment.TabIndex = 3;
             this.AddApoinment.Text = "Add";
             this.AddApoinment.UseVisualStyleBackColor = true;
+            this.AddApoinment.Visible = false;
             this.AddApoinment.Click += new System.EventHandler(this.AddApoinment_Click);
+            // 
+            // CountOfDayAppointment
+            // 
+            this.CountOfDayAppointment.AutoSize = true;
+            this.CountOfDayAppointment.Location = new System.Drawing.Point(118, 71);
+            this.CountOfDayAppointment.Name = "CountOfDayAppointment";
+            this.CountOfDayAppointment.Size = new System.Drawing.Size(35, 13);
+            this.CountOfDayAppointment.TabIndex = 4;
+            this.CountOfDayAppointment.Text = "label1";
             // 
             // DayBlank
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.CountOfDayAppointment);
             this.Controls.Add(this.AddApoinment);
-            this.Controls.Add(this.passiveAppoinment);
-            this.Controls.Add(this.activeAppoinment);
             this.Controls.Add(this.dayNumber);
             this.Name = "DayBlank";
             this.Size = new System.Drawing.Size(170, 100);
             this.Load += new System.EventHandler(this.DayBlank_Load);
+            this.Enter += new System.EventHandler(this.DayBlank_Enter);
+            this.MouseEnter += new System.EventHandler(this.DayBlank_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.DayBlank_MouseLeave);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label dayNumber;
-        private System.Windows.Forms.Panel activeAppoinment;
-        private System.Windows.Forms.Panel passiveAppoinment;
         private System.Windows.Forms.Button AddApoinment;
+        private System.Windows.Forms.Label CountOfDayAppointment;
     }
 }

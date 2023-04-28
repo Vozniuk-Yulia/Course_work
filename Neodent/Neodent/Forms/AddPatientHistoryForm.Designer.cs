@@ -39,7 +39,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddPatientHistory = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -144,14 +144,15 @@
             this.textBox5.Size = new System.Drawing.Size(344, 79);
             this.textBox5.TabIndex = 10;
             // 
-            // button1
+            // AddPatientHistory
             // 
-            this.button1.Location = new System.Drawing.Point(520, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 31);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Додати";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddPatientHistory.Location = new System.Drawing.Point(520, 267);
+            this.AddPatientHistory.Name = "AddPatientHistory";
+            this.AddPatientHistory.Size = new System.Drawing.Size(102, 31);
+            this.AddPatientHistory.TabIndex = 11;
+            this.AddPatientHistory.Text = "Додати";
+            this.AddPatientHistory.UseVisualStyleBackColor = true;
+            this.AddPatientHistory.Click += new System.EventHandler(this.AddPatientHistory_Click);
             // 
             // label7
             // 
@@ -178,7 +179,7 @@
             this.ClientSize = new System.Drawing.Size(656, 347);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddPatientHistory);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -210,7 +211,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddPatientHistory;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox6;
     }

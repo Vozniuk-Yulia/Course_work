@@ -46,6 +46,7 @@
             this.marchButton = new System.Windows.Forms.Button();
             this.februaryButton = new System.Windows.Forms.Button();
             this.januaryButton = new System.Windows.Forms.Button();
+            this.panelAppointmentInfo = new System.Windows.Forms.Panel();
             this.panelYear.SuspendLayout();
             this.panelMonth.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 648);
+            this.panel2.Size = new System.Drawing.Size(785, 648);
             this.panel2.TabIndex = 1;
             // 
             // panelYear
@@ -64,15 +65,15 @@
             this.panelYear.Controls.Add(this.nextYear);
             this.panelYear.Controls.Add(this.previousYear);
             this.panelYear.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelYear.Location = new System.Drawing.Point(900, 0);
+            this.panelYear.Location = new System.Drawing.Point(785, 0);
             this.panelYear.Name = "panelYear";
-            this.panelYear.Size = new System.Drawing.Size(248, 52);
+            this.panelYear.Size = new System.Drawing.Size(363, 52);
             this.panelYear.TabIndex = 2;
             // 
             // yearLabel
             // 
             this.yearLabel.AutoSize = true;
-            this.yearLabel.Location = new System.Drawing.Point(109, 20);
+            this.yearLabel.Location = new System.Drawing.Point(171, 20);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(35, 13);
             this.yearLabel.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             // nextYear
             // 
-            this.nextYear.Location = new System.Drawing.Point(201, 9);
+            this.nextYear.Location = new System.Drawing.Point(316, 9);
             this.nextYear.Name = "nextYear";
             this.nextYear.Size = new System.Drawing.Size(35, 35);
             this.nextYear.TabIndex = 1;
@@ -113,14 +114,14 @@
             this.panelMonth.Controls.Add(this.februaryButton);
             this.panelMonth.Controls.Add(this.januaryButton);
             this.panelMonth.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelMonth.Location = new System.Drawing.Point(900, 52);
+            this.panelMonth.Location = new System.Drawing.Point(998, 52);
             this.panelMonth.Name = "panelMonth";
-            this.panelMonth.Size = new System.Drawing.Size(248, 596);
+            this.panelMonth.Size = new System.Drawing.Size(150, 596);
             this.panelMonth.TabIndex = 3;
             // 
             // decemberButton
             // 
-            this.decemberButton.Location = new System.Drawing.Point(53, 512);
+            this.decemberButton.Location = new System.Drawing.Point(3, 512);
             this.decemberButton.Name = "decemberButton";
             this.decemberButton.Size = new System.Drawing.Size(140, 40);
             this.decemberButton.TabIndex = 12;
@@ -129,7 +130,7 @@
             // 
             // novemberButton
             // 
-            this.novemberButton.Location = new System.Drawing.Point(53, 466);
+            this.novemberButton.Location = new System.Drawing.Point(3, 466);
             this.novemberButton.Name = "novemberButton";
             this.novemberButton.Size = new System.Drawing.Size(140, 40);
             this.novemberButton.TabIndex = 11;
@@ -138,7 +139,7 @@
             // 
             // octoberButton
             // 
-            this.octoberButton.Location = new System.Drawing.Point(53, 420);
+            this.octoberButton.Location = new System.Drawing.Point(3, 420);
             this.octoberButton.Name = "octoberButton";
             this.octoberButton.Size = new System.Drawing.Size(140, 40);
             this.octoberButton.TabIndex = 10;
@@ -147,7 +148,7 @@
             // 
             // septemberButton
             // 
-            this.septemberButton.Location = new System.Drawing.Point(53, 374);
+            this.septemberButton.Location = new System.Drawing.Point(3, 374);
             this.septemberButton.Name = "septemberButton";
             this.septemberButton.Size = new System.Drawing.Size(140, 40);
             this.septemberButton.TabIndex = 9;
@@ -156,7 +157,7 @@
             // 
             // augustButton
             // 
-            this.augustButton.Location = new System.Drawing.Point(53, 328);
+            this.augustButton.Location = new System.Drawing.Point(3, 328);
             this.augustButton.Name = "augustButton";
             this.augustButton.Size = new System.Drawing.Size(140, 40);
             this.augustButton.TabIndex = 8;
@@ -165,7 +166,7 @@
             // 
             // julyButton
             // 
-            this.julyButton.Location = new System.Drawing.Point(53, 282);
+            this.julyButton.Location = new System.Drawing.Point(3, 282);
             this.julyButton.Name = "julyButton";
             this.julyButton.Size = new System.Drawing.Size(140, 40);
             this.julyButton.TabIndex = 7;
@@ -174,7 +175,7 @@
             // 
             // juneButton
             // 
-            this.juneButton.Location = new System.Drawing.Point(53, 236);
+            this.juneButton.Location = new System.Drawing.Point(3, 236);
             this.juneButton.Name = "juneButton";
             this.juneButton.Size = new System.Drawing.Size(140, 40);
             this.juneButton.TabIndex = 6;
@@ -183,7 +184,7 @@
             // 
             // mayButton
             // 
-            this.mayButton.Location = new System.Drawing.Point(53, 190);
+            this.mayButton.Location = new System.Drawing.Point(3, 190);
             this.mayButton.Name = "mayButton";
             this.mayButton.Size = new System.Drawing.Size(140, 40);
             this.mayButton.TabIndex = 5;
@@ -192,7 +193,7 @@
             // 
             // aprilButton
             // 
-            this.aprilButton.Location = new System.Drawing.Point(53, 144);
+            this.aprilButton.Location = new System.Drawing.Point(3, 144);
             this.aprilButton.Name = "aprilButton";
             this.aprilButton.Size = new System.Drawing.Size(140, 40);
             this.aprilButton.TabIndex = 4;
@@ -201,7 +202,7 @@
             // 
             // marchButton
             // 
-            this.marchButton.Location = new System.Drawing.Point(53, 98);
+            this.marchButton.Location = new System.Drawing.Point(3, 98);
             this.marchButton.Name = "marchButton";
             this.marchButton.Size = new System.Drawing.Size(140, 40);
             this.marchButton.TabIndex = 3;
@@ -210,7 +211,7 @@
             // 
             // februaryButton
             // 
-            this.februaryButton.Location = new System.Drawing.Point(53, 52);
+            this.februaryButton.Location = new System.Drawing.Point(3, 52);
             this.februaryButton.Name = "februaryButton";
             this.februaryButton.Size = new System.Drawing.Size(140, 40);
             this.februaryButton.TabIndex = 2;
@@ -219,17 +220,25 @@
             // 
             // januaryButton
             // 
-            this.januaryButton.Location = new System.Drawing.Point(53, 6);
+            this.januaryButton.Location = new System.Drawing.Point(3, 6);
             this.januaryButton.Name = "januaryButton";
             this.januaryButton.Size = new System.Drawing.Size(140, 40);
             this.januaryButton.TabIndex = 1;
             this.januaryButton.Text = "Січень";
             this.januaryButton.UseVisualStyleBackColor = true;
             // 
+            // panelAppointmentInfo
+            // 
+            this.panelAppointmentInfo.Location = new System.Drawing.Point(785, 52);
+            this.panelAppointmentInfo.Name = "panelAppointmentInfo";
+            this.panelAppointmentInfo.Size = new System.Drawing.Size(210, 596);
+            this.panelAppointmentInfo.TabIndex = 4;
+            // 
             // ScheduleForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1148, 648);
+            this.Controls.Add(this.panelAppointmentInfo);
             this.Controls.Add(this.panelMonth);
             this.Controls.Add(this.panelYear);
             this.Controls.Add(this.panel2);
@@ -263,5 +272,6 @@
         private System.Windows.Forms.Button marchButton;
         private System.Windows.Forms.Button februaryButton;
         private System.Windows.Forms.Button januaryButton;
+        private System.Windows.Forms.Panel panelAppointmentInfo;
     }
 }

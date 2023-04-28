@@ -35,10 +35,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.AddPatientHistoryBtn = new System.Windows.Forms.Button();
+            this.txtPatientHistoryMiddlename = new System.Windows.Forms.Label();
+            this.txtPatientHistorySurname = new System.Windows.Forms.Label();
+            this.txtPatientHistoryName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +56,10 @@
             // 
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.AddPatientHistoryBtn);
+            this.panel1.Controls.Add(this.txtPatientHistoryMiddlename);
+            this.panel1.Controls.Add(this.txtPatientHistorySurname);
+            this.panel1.Controls.Add(this.txtPatientHistoryName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -86,46 +86,46 @@
             this.button2.TabIndex = 4;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // AddPatientHistoryBtn
             // 
-            this.button1.BackgroundImage = global::Neodent.Properties.Resources.mathematics_sign_plus_round_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(943, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 41);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AddPatientHistoryBtn.BackgroundImage = global::Neodent.Properties.Resources.mathematics_sign_plus_round_icon;
+            this.AddPatientHistoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddPatientHistoryBtn.Location = new System.Drawing.Point(943, 12);
+            this.AddPatientHistoryBtn.Name = "AddPatientHistoryBtn";
+            this.AddPatientHistoryBtn.Size = new System.Drawing.Size(43, 41);
+            this.AddPatientHistoryBtn.TabIndex = 3;
+            this.AddPatientHistoryBtn.UseVisualStyleBackColor = true;
+            this.AddPatientHistoryBtn.Click += new System.EventHandler(this.AddPatientHistoryBtn_Click);
             // 
-            // label3
+            // txtPatientHistoryMiddlename
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(431, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "По-батькові";
+            this.txtPatientHistoryMiddlename.AutoSize = true;
+            this.txtPatientHistoryMiddlename.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPatientHistoryMiddlename.Location = new System.Drawing.Point(458, 18);
+            this.txtPatientHistoryMiddlename.Name = "txtPatientHistoryMiddlename";
+            this.txtPatientHistoryMiddlename.Size = new System.Drawing.Size(128, 25);
+            this.txtPatientHistoryMiddlename.TabIndex = 2;
+            this.txtPatientHistoryMiddlename.Text = "По-батькові";
             // 
-            // label2
+            // txtPatientHistorySurname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(206, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Прізвище";
+            this.txtPatientHistorySurname.AutoSize = true;
+            this.txtPatientHistorySurname.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPatientHistorySurname.Location = new System.Drawing.Point(227, 17);
+            this.txtPatientHistorySurname.Name = "txtPatientHistorySurname";
+            this.txtPatientHistorySurname.Size = new System.Drawing.Size(103, 25);
+            this.txtPatientHistorySurname.TabIndex = 1;
+            this.txtPatientHistorySurname.Text = "Прізвище";
             // 
-            // label1
+            // txtPatientHistoryName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(34, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ім\'я";
+            this.txtPatientHistoryName.AutoSize = true;
+            this.txtPatientHistoryName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPatientHistoryName.Location = new System.Drawing.Point(44, 13);
+            this.txtPatientHistoryName.Name = "txtPatientHistoryName";
+            this.txtPatientHistoryName.Size = new System.Drawing.Size(54, 30);
+            this.txtPatientHistoryName.TabIndex = 0;
+            this.txtPatientHistoryName.Text = "Ім\'я";
             // 
             // panel2
             // 
@@ -229,6 +229,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatientHistoryForm";
             this.Text = "PatientHistoryForm";
+            this.Load += new System.EventHandler(this.PatientHistoryForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -240,12 +241,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtPatientHistoryMiddlename;
+        private System.Windows.Forms.Label txtPatientHistorySurname;
+        private System.Windows.Forms.Label txtPatientHistoryName;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddPatientHistoryBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

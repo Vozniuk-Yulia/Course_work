@@ -1,5 +1,6 @@
 ﻿using Neodent.Context;
 using Neodent.Forms;
+using Neodent.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Neodent
             Application.EnableVisualStyles();
             using (var dbContext = new DentistryDBContext())
             {
-                
+               
             }
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());

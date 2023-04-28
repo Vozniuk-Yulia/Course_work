@@ -12,7 +12,7 @@ namespace Neodent.Forms
 {
     public partial class CustomCalendar : UserControl
     {
-        private readonly Color HOLIDAY_COLOR = Color.FromArgb(85, 238, 82, 83);
+        private readonly Color HOLIDAY_COLOR = Color.LightBlue;
         private readonly Color DAY_COLOR = Color.White;
         private readonly Color PREVIOUS_MONTH_DAY_COLOR = Color.Gray;
         public CustomCalendar()
@@ -34,7 +34,6 @@ namespace Neodent.Forms
                 : Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
 
             dayOfTheWeek = dayOfTheWeek == 1 ? 8 : dayOfTheWeek;
-            //Заполняем дни предыдущего месяца
             for (int i = 1; i < dayOfTheWeek; i++)
             {
                 (tableLayoutPanel1.Controls[42 - i] as DayBlank).Refresh(PREVIOUS_MONTH_DAY_COLOR,
@@ -42,7 +41,6 @@ namespace Neodent.Forms
                     new DateTime(previousMonth.Year, previousMonth.Month, (previousMonthDays - dayOfTheWeek + i + 1)),
                     Color.Black);
             }
-            // Заполняем дни текущего месяца
             for (int i = 0; i < days; i++)
             {
                 if ((42 - i - dayOfTheWeek) % 7 == 0 || (42 - i - dayOfTheWeek - 1) % 7 == 0)
@@ -60,8 +58,6 @@ namespace Neodent.Forms
                         Color.DarkGray);
                 }
             }
-
-            // Заполняем дни след. месяца
             int otherDays = 42 - days - dayOfTheWeek;
             for (int i = otherDays; i >= 0; i--)
             {
