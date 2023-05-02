@@ -36,8 +36,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel_container = new System.Windows.Forms.Panel();
@@ -136,8 +134,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -145,26 +141,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1152, 47);
             this.panel3.TabIndex = 3;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::Neodent.Properties.Resources.search_icon;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Location = new System.Drawing.Point(252, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(35, 35);
-            this.button7.TabIndex = 17;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(32, 8);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 30);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "Пошук";
             // 
             // label2
             // 
@@ -226,8 +202,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel_container;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Neodent.Context;
+using Neodent.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +35,47 @@ namespace Neodent.Forms
             txtPatientHistoryName.Text = PatientHistoryName;
             txtPatientHistorySurname.Text = PatientHistorySurname;
             txtPatientHistoryMiddlename.Text = PatientHistoryMiddlename;
+            LoadData();
+        }
+        private void LoadData()
+        {
+            using (var dbContext = new DentistryDBContext())
+            {
+                var patient = dbContext.Patients.FirstOrDefault(p => p.User.Name == PatientHistoryName);
+                int patientId = patient.Id;
+                var histories = dbContext.PatientHistories.Where(h=>h.PatientID==patientId)
+                .Select(c => new PatientHistory()
+                {
+                    Id = c.Id,
+                    DateTime=c.DateTime,
+                    Service=c.Service,
+                    CountOfTeeth=c.CountOfTeeth,
+                    Notes=c.Notes
+                })
+                .ToList();
+                foreach (var history in histories)
+                {
+                    patientHistoryDataGrid.Rows.Add(new object[]
+                    {
+                        history.DateTime,
+                        history.Service.Name,
+                        history.CountOfTeeth,
+                        history.Notes,
+                    });
+                }
+            }
+        }
+
+        private void removePatientHistory_Click(object sender, EventArgs e)
+        {
+            int selectedId = Convert.ToInt32(patientHistoryDataGrid.CurrentRow.Cells["Id"].Value);
+            using (var dbContext = new DentistryDBContext())
+            {
+                var patientHistory = dbContext.PatientHistories.Where(d => d.Id == selectedId).FirstOrDefault();
+                dbContext.PatientHistories.Remove(patientHistory);
+                dbContext.SaveChanges();
+            }
+            MessageBox.Show("Видаленно успішно");
         }
     }
 }

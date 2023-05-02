@@ -15,7 +15,7 @@ namespace Neodent.Forms
     {
         private DateTime _currentDate;
         private Color _backColor;
-        private int countOfAppointment;
+        public int countOfAppointment;
         public DayBlank()
         {
             InitializeComponent();
@@ -24,22 +24,32 @@ namespace Neodent.Forms
         {
             BackColor = _backColor = backColor;
             dayNumber.Text = day.ToString();
+           
             _currentDate = date;
             if (_currentDate.ToShortDateString() == DateTime.Now.ToShortDateString())
                 BackColor = Color.Black;
 
             dayNumber.ForeColor = foreColor;
-            using (var dbContext = new DentistryDBContext())
-            {
-                countOfAppointment =dbContext.Appointments.Where(a=>a.Date==_currentDate).Count();
-            }
+            
+            //using (var dbContext = new DentistryDBContext())
+            //{
+            //    countOfAppointment =dbContext.Appointments.Where(a=>a.Date==_currentDate).Count();
+            //    CountOfDayAppointment.Text = countOfAppointment.ToString();
+            //}
 
-                
+
         }
 
         private void DayBlank_Load(object sender, EventArgs e)
         {
-            CountOfDayAppointment.Text=countOfAppointment.ToString();
+
+            new List<Control> { dayNumber , AddApoinment, countOfDayAppointment, this}.ForEach(x =>
+            {
+           
+                x.MouseEnter += DayBlank_MouseEnter;
+                x.MouseLeave += DayBlank_MouseLeave;
+            });
+    
         }
 
         private void AddApoinment_Click(object sender, EventArgs e)
@@ -59,11 +69,19 @@ namespace Neodent.Forms
         private void DayBlank_Enter(object sender, EventArgs e)
         {
             AddApoinment.Visible = true;
+            countOfDayAppointment.Visible = true;
+            
         }
 
         private void DayBlank_MouseEnter(object sender, EventArgs e)
         {
             AddApoinment.Visible = true;
+        }
+
+        private void DayBlank_MouseClick(object sender, MouseEventArgs e)
+        {
+            DetailDayAppointment detailDay = new DetailDayAppointment(_currentDate);
+            detailDay.Show();
         }
     }
 }

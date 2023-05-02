@@ -12,7 +12,6 @@ namespace Neodent.Context
             Database.EnsureCreated();
         }
         public DbSet<Appointment> Appointments { get; set; }
-        public DbSet<Medicine> Medicines { get; set; }
         public DbSet<PatientHistory> PatientHistories { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<User> Users { get; set; }
@@ -29,6 +28,14 @@ namespace Neodent.Context
               .HasOne<Patient>(a => a.Patient)
               .WithMany(d => d.patientHistories)
               .HasForeignKey(p => p.PatientID);
+            //modelBuilder.Entity<Appointment>()
+            // .HasOne<Patient>(a => a.Patient)
+            // .WithMany(d => d.appointments)
+            // .HasForeignKey(p => p.PatientID);
+            //modelBuilder.Entity<Appointment>()
+            // .HasOne<Dentist>(a => a.Dentist)
+            // .WithMany(d => d.appointments)
+            // .HasForeignKey(p => p.DentistID);
 
             modelBuilder.Entity<Dentist>()
             .HasOne(s => s.User)

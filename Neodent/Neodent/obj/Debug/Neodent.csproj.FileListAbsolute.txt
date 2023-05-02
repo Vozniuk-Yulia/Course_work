@@ -20,13 +20,8 @@ E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.csproj.AssemblyReferen
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.AddDentistForm.resources
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.DetailsPatientForm.resources
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.EventForm.resources
-E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.InvoicesForm.resources
-E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.AddInvoiceForm.resources
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.DetailDentistForm.resources
-E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.InvoicePatientInfo.resources
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.DentistMainForm.resources
-E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.ListOfMedicineForm.resources
-E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.ListOfServices.resources
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.PatientHistoryForm.resources
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.AddPatientHistoryForm.resources
 E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\EntityFramework.dll
@@ -114,3 +109,4 @@ E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\pt-BR\Microsoft.Data.SqlClient
 E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.DetailDayAppointment.resources

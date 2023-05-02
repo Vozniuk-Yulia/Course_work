@@ -19,6 +19,7 @@ namespace Neodent.Models
         public  ICollection<PatientHistory> patientHistories { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
+        //public ICollection<Appointment> appointments { get; set; }
 
     }
 }

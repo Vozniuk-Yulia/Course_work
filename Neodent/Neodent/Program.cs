@@ -20,7 +20,7 @@ namespace Neodent
             Application.EnableVisualStyles();
             using (var dbContext = new DentistryDBContext())
             {
-               
+              
             }
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());

@@ -12,14 +12,11 @@ namespace Neodent.Models
     {
         [AutoIncrement, PrimaryKey]
         public int Id { get; set; }
-        public Patient Patient { get; set; }
-
-        public Dentist Dentist { get; set; }
-
         public DateTime Date { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public Service Service { get; set; }
-        
+        public Patient Patient { get; set; }
+        public Dentist Dentist { get; set; }
     }
 }

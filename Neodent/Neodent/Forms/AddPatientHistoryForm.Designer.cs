@@ -32,16 +32,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPatientHistoryData = new System.Windows.Forms.TextBox();
+            this.txtPatientHistoryService = new System.Windows.Forms.TextBox();
+            this.txtPatientHistoryCountTeeth = new System.Windows.Forms.TextBox();
+            this.txtPatientHistoryAdditional = new System.Windows.Forms.TextBox();
             this.AddPatientHistory = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +64,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(25, 135);
+            this.label3.Location = new System.Drawing.Point(408, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 17);
             this.label3.TabIndex = 2;
@@ -78,21 +74,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(25, 199);
+            this.label4.Location = new System.Drawing.Point(25, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Додатково";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(216, 135);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ціна";
             // 
             // label6
             // 
@@ -104,49 +90,41 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Додати історію хвороби";
             // 
-            // textBox1
+            // txtPatientHistoryData
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 87);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 27);
-            this.textBox1.TabIndex = 6;
+            this.txtPatientHistoryData.Location = new System.Drawing.Point(28, 87);
+            this.txtPatientHistoryData.Multiline = true;
+            this.txtPatientHistoryData.Name = "txtPatientHistoryData";
+            this.txtPatientHistoryData.Size = new System.Drawing.Size(153, 27);
+            this.txtPatientHistoryData.TabIndex = 6;
             // 
-            // textBox2
+            // txtPatientHistoryService
             // 
-            this.textBox2.Location = new System.Drawing.Point(219, 89);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 25);
-            this.textBox2.TabIndex = 7;
+            this.txtPatientHistoryService.Location = new System.Drawing.Point(219, 89);
+            this.txtPatientHistoryService.Multiline = true;
+            this.txtPatientHistoryService.Name = "txtPatientHistoryService";
+            this.txtPatientHistoryService.Size = new System.Drawing.Size(153, 25);
+            this.txtPatientHistoryService.TabIndex = 7;
             // 
-            // textBox3
+            // txtPatientHistoryCountTeeth
             // 
-            this.textBox3.Location = new System.Drawing.Point(28, 155);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 25);
-            this.textBox3.TabIndex = 8;
+            this.txtPatientHistoryCountTeeth.Location = new System.Drawing.Point(411, 89);
+            this.txtPatientHistoryCountTeeth.Multiline = true;
+            this.txtPatientHistoryCountTeeth.Name = "txtPatientHistoryCountTeeth";
+            this.txtPatientHistoryCountTeeth.Size = new System.Drawing.Size(153, 25);
+            this.txtPatientHistoryCountTeeth.TabIndex = 8;
             // 
-            // textBox4
+            // txtPatientHistoryAdditional
             // 
-            this.textBox4.Location = new System.Drawing.Point(219, 155);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 25);
-            this.textBox4.TabIndex = 9;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(28, 219);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(344, 79);
-            this.textBox5.TabIndex = 10;
+            this.txtPatientHistoryAdditional.Location = new System.Drawing.Point(28, 172);
+            this.txtPatientHistoryAdditional.Multiline = true;
+            this.txtPatientHistoryAdditional.Name = "txtPatientHistoryAdditional";
+            this.txtPatientHistoryAdditional.Size = new System.Drawing.Size(344, 79);
+            this.txtPatientHistoryAdditional.TabIndex = 10;
             // 
             // AddPatientHistory
             // 
-            this.AddPatientHistory.Location = new System.Drawing.Point(520, 267);
+            this.AddPatientHistory.Location = new System.Drawing.Point(453, 267);
             this.AddPatientHistory.Name = "AddPatientHistory";
             this.AddPatientHistory.Size = new System.Drawing.Size(102, 31);
             this.AddPatientHistory.TabIndex = 11;
@@ -154,45 +132,24 @@
             this.AddPatientHistory.UseVisualStyleBackColor = true;
             this.AddPatientHistory.Click += new System.EventHandler(this.AddPatientHistory_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(415, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Матеріали";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(418, 91);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(204, 89);
-            this.textBox6.TabIndex = 13;
-            // 
             // AddPatientHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 347);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.AddPatientHistory);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPatientHistoryAdditional);
+            this.Controls.Add(this.txtPatientHistoryCountTeeth);
+            this.Controls.Add(this.txtPatientHistoryService);
+            this.Controls.Add(this.txtPatientHistoryData);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddPatientHistoryForm";
             this.Text = "AddPatientHistoryForm";
+            this.Load += new System.EventHandler(this.AddPatientHistoryForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,15 +161,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPatientHistoryData;
+        private System.Windows.Forms.TextBox txtPatientHistoryService;
+        private System.Windows.Forms.TextBox txtPatientHistoryCountTeeth;
+        private System.Windows.Forms.TextBox txtPatientHistoryAdditional;
         private System.Windows.Forms.Button AddPatientHistory;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
     }
 }

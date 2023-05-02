@@ -21,18 +21,20 @@ namespace Neodent.Forms
             InitializeComponent();
             dentistDataGrid.Rows.Add(
                new object[]
-               {"Yulia",
-                "Voznyuk",
-                "Dentist",
+               {"1",
+                   "Тетяна",
+                "Грищук",
+                "Стоматолог-гігієніст",
                 "3",
-               "Woman"});
+               "Жінка"});
             dentistDataGrid.Rows.Add(
                new object[]
-               {"Yulia",
-                "Voznyuk",
-                "Dentist",
-                "3",
-               "Woman"});
+               {"2",
+                   "Андрій",
+                "Кравець",
+                "Стоматолг-хірург",
+                "5",
+               "Чоловік"});
         }
 
 

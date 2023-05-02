@@ -39,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.startTimeAppoinment = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.endTimeAppointment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -110,9 +112,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(188, 207);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Години";
+            this.label3.Text = "Години початок";
             // 
             // startTimeAppoinment
             // 
@@ -123,11 +125,30 @@
             this.startTimeAppoinment.TabIndex = 11;
             this.startTimeAppoinment.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 291);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Години кінець";
+            // 
+            // endTimeAppointment
+            // 
+            this.endTimeAppointment.Location = new System.Drawing.Point(118, 288);
+            this.endTimeAppointment.Multiline = true;
+            this.endTimeAppointment.Name = "endTimeAppointment";
+            this.endTimeAppointment.Size = new System.Drawing.Size(158, 25);
+            this.endTimeAppointment.TabIndex = 13;
+            // 
             // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 395);
+            this.Controls.Add(this.endTimeAppointment);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.startTimeAppoinment);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -156,5 +177,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox startTimeAppoinment;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox endTimeAppointment;
     }
 }

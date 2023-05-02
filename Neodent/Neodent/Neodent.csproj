@@ -195,12 +195,6 @@
     <Compile Include="Forms\AddPatientForm.Designer.cs">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddInvoiceForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\AddInvoiceForm.Designer.cs">
-      <DependentUpon>AddInvoiceForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AddPatientHistoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +231,12 @@
     <Compile Include="Forms\DentistsForm.Designer.cs">
       <DependentUpon>DentistsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DetailDayAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailDayAppointment.Designer.cs">
+      <DependentUpon>DetailDayAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DetailDentistForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,30 +254,6 @@
     </Compile>
     <Compile Include="Forms\EventForm.Designer.cs">
       <DependentUpon>EventForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\InvoicePatientInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\InvoicePatientInfo.Designer.cs">
-      <DependentUpon>InvoicePatientInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\InvoicesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\InvoicesForm.Designer.cs">
-      <DependentUpon>InvoicesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ListOfMedicineForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ListOfMedicineForm.Designer.cs">
-      <DependentUpon>ListOfMedicineForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ListOfServices.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ListOfServices.Designer.cs">
-      <DependentUpon>ListOfServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -312,7 +288,6 @@
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Dentist.cs" />
-    <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\PatientHistory.cs" />
     <Compile Include="Models\Service.cs" />
@@ -324,9 +299,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddPatientForm.resx">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddInvoiceForm.resx">
-      <DependentUpon>AddInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddPatientHistoryForm.resx">
       <DependentUpon>AddPatientHistoryForm.cs</DependentUpon>
@@ -346,6 +318,9 @@
     <EmbeddedResource Include="Forms\DentistsForm.resx">
       <DependentUpon>DentistsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailDayAppointment.resx">
+      <DependentUpon>DetailDayAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DetailDentistForm.resx">
       <DependentUpon>DetailDentistForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,18 +329,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InvoicePatientInfo.resx">
-      <DependentUpon>InvoicePatientInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InvoicesForm.resx">
-      <DependentUpon>InvoicesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListOfMedicineForm.resx">
-      <DependentUpon>ListOfMedicineForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListOfServices.resx">
-      <DependentUpon>ListOfServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

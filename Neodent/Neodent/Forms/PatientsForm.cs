@@ -109,7 +109,7 @@ namespace Neodent.Forms
                 patientHistoryForm.PatientHistoryName = patient.Name;
                 patientHistoryForm.PatientHistorySurname = patient.Surname;
                 patientHistoryForm.PatientHistoryMiddlename = patient.Middlename;
-              
+                
             }
             ContainerControl(patientHistoryForm);
 

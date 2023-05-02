@@ -63,6 +63,7 @@ namespace Neodent.Forms
             }
             MessageBox.Show("Додано успішно");
             this.Close();
+            
         }
     }
 }

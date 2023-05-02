@@ -15,7 +15,7 @@ namespace Neodent.Forms
     public partial class EventForm : Form
     {
         private DateTime currentDate;
-
+       
         public EventForm(DateTime currentDate)
         {
             InitializeComponent();
@@ -26,11 +26,12 @@ namespace Neodent.Forms
 
         private void EventForm_Load(object sender, EventArgs e)
         {
-            //txtDate.Text =UserControlDays.staticDays + ".0"+ ScheduleForm.staticMonth +"."+ScheduleForm.staticYear;
+            
             LoadPatientData();
             LoadDentistData();
             LoadServiceData();
             dateAppoinment.Value = currentDate;
+           
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -101,11 +102,12 @@ namespace Neodent.Forms
         private void addEvent_Click(object sender, EventArgs e)
         {
             int dentistId, patientId, serviceId;
-            var selectedDentistNames = listOfDentists.SelectedItem.ToString().Split(' ');
+            string[] selectedDentistNames = listOfDentists.SelectedItem.ToString().Split(' ');
             var selectedPatientNames = listOfPatients.SelectedItem.ToString().Split(' ');
             var selectedServiceName=listOfServices.SelectedItem.ToString();
             DateTime dateTimeAppointment = DateTime.Parse(dateAppoinment.Text);
             TimeSpan startdateTimeAppointment = TimeSpan.Parse(startTimeAppoinment.Text);
+            TimeSpan enddateTimeAppointment = TimeSpan.Parse(endTimeAppointment.Text);
             using (var dbContext = new DentistryDBContext())
             {
                 var selectedDentist = dbContext.Dentists.FirstOrDefault(p=>p.User.Name == selectedDentistNames[1]);
@@ -118,19 +120,10 @@ namespace Neodent.Forms
                 {
                     Date = dateTimeAppointment.Date,
                     StartTime = startdateTimeAppointment,
-                    EndTime = startdateTimeAppointment,
-                    Dentist = new Dentist()
-                    {
-                        Id = dentistId
-                    },
-                    Patient = new Patient()
-                    {
-                        Id = patientId
-                    },
-                    Service = new Service()
-                    {
-                        Id = serviceId
-                    }
+                    EndTime = enddateTimeAppointment,
+                    Dentist=selectedDentist,
+                    Patient = selectedPatient,
+                    Service = selectedService
                 };
                 dbContext.Appointments.Add(appointment);
                 dbContext.SaveChanges();
