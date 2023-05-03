@@ -45,7 +45,7 @@ namespace Neodent.Forms
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }

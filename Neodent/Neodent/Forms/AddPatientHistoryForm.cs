@@ -47,7 +47,7 @@ namespace Neodent.Forms
                 patient.patientHistories.Add(patientHistory);
                 dbContext.SaveChanges();
             }
-            MessageBox.Show("Save");
+            MessageBox.Show("Додано успішно");
 
                 
         }

@@ -18,24 +18,18 @@ namespace Neodent.Forms
         public PatientsForm()
         {
             InitializeComponent();
-            patientsDataGrid1.Rows.Add(
-                new object[]
-                {"Voznyuk",
-                "Yulia",
-                "0681925839",
-                "20.10.2004"});
-
+           
         }
         private void addNewPatient_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+
             AddPatientForm addPatientForm = new AddPatientForm();
             addPatientForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            
             AddPatientForm addPatientForm = new AddPatientForm();
             addPatientForm.Show();
         }

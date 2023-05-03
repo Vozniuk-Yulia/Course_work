@@ -15,7 +15,7 @@ namespace Neodent.Forms
     public partial class EventForm : Form
     {
         private DateTime currentDate;
-       
+        private TimeSpan timeSpan;
         public EventForm(DateTime currentDate)
         {
             InitializeComponent();
@@ -101,34 +101,42 @@ namespace Neodent.Forms
         }
         private void addEvent_Click(object sender, EventArgs e)
         {
-            int dentistId, patientId, serviceId;
-            string[] selectedDentistNames = listOfDentists.SelectedItem.ToString().Split(' ');
-            var selectedPatientNames = listOfPatients.SelectedItem.ToString().Split(' ');
-            var selectedServiceName=listOfServices.SelectedItem.ToString();
-            DateTime dateTimeAppointment = DateTime.Parse(dateAppoinment.Text);
-            TimeSpan startdateTimeAppointment = TimeSpan.Parse(startTimeAppoinment.Text);
-            TimeSpan enddateTimeAppointment = TimeSpan.Parse(endTimeAppointment.Text);
-            using (var dbContext = new DentistryDBContext())
+            if(listOfPatients.SelectedIndex !=-1 && listOfDentists.SelectedIndex != -1 && listOfServices.SelectedIndex != -1 && TimeSpan.TryParse(startTimeAppoinment.Text, out timeSpan) && TimeSpan.TryParse(endTimeAppointment.Text, out timeSpan))
             {
-                var selectedDentist = dbContext.Dentists.FirstOrDefault(p=>p.User.Name == selectedDentistNames[1]);
-                dentistId = selectedDentist.Id;
-                var selectedPatient = dbContext.Patients.FirstOrDefault(p => p.User.Name == selectedPatientNames[1]);
-                patientId = selectedPatient.Id;
-                var selectedService = dbContext.Services.FirstOrDefault(p => p.Name == selectedServiceName);
-                serviceId = selectedService.Id;
-                Appointment appointment = new Appointment()
+                int dentistId, patientId, serviceId;
+                string[] selectedDentistNames = listOfDentists.SelectedItem.ToString().Split(' ');
+                var selectedPatientNames = listOfPatients.SelectedItem.ToString().Split(' ');
+                var selectedServiceName = listOfServices.SelectedItem.ToString();
+                DateTime dateTimeAppointment = DateTime.Parse(dateAppoinment.Text);
+                TimeSpan startdateTimeAppointment = TimeSpan.Parse(startTimeAppoinment.Text);
+                TimeSpan enddateTimeAppointment = TimeSpan.Parse(endTimeAppointment.Text);
+                using (var dbContext = new DentistryDBContext())
                 {
-                    Date = dateTimeAppointment.Date,
-                    StartTime = startdateTimeAppointment,
-                    EndTime = enddateTimeAppointment,
-                    Dentist=selectedDentist,
-                    Patient = selectedPatient,
-                    Service = selectedService
-                };
-                dbContext.Appointments.Add(appointment);
-                dbContext.SaveChanges();
-                MessageBox.Show("Save");
+                    var selectedDentist = dbContext.Dentists.FirstOrDefault(p => p.User.Name == selectedDentistNames[1]);
+                    dentistId = selectedDentist.Id;
+                    var selectedPatient = dbContext.Patients.FirstOrDefault(p => p.User.Name == selectedPatientNames[1]);
+                    patientId = selectedPatient.Id;
+                    var selectedService = dbContext.Services.FirstOrDefault(p => p.Name == selectedServiceName);
+                    serviceId = selectedService.Id;
+                    Appointment appointment = new Appointment()
+                    {
+                        Date = dateTimeAppointment.Date,
+                        StartTime = startdateTimeAppointment,
+                        EndTime = enddateTimeAppointment,
+                        Dentist = selectedDentist,
+                        Patient = selectedPatient,
+                        Service = selectedService
+                    };
+                    dbContext.Appointments.Add(appointment);
+                    dbContext.SaveChanges();
+                    MessageBox.Show("Додано успішно");
+                }
             }
+            else
+            {
+                MessageBox.Show("Введіть коректні дані");
+            }
+            
           
            
         }

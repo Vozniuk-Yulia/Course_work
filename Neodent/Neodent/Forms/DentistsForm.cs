@@ -19,22 +19,7 @@ namespace Neodent.Forms
         public DentistsForm()
         {
             InitializeComponent();
-            dentistDataGrid.Rows.Add(
-               new object[]
-               {"1",
-                   "Тетяна",
-                "Грищук",
-                "Стоматолог-гігієніст",
-                "3",
-               "Жінка"});
-            dentistDataGrid.Rows.Add(
-               new object[]
-               {"2",
-                   "Андрій",
-                "Кравець",
-                "Стоматолг-хірург",
-                "5",
-               "Чоловік"});
+            
         }
 
 
@@ -116,22 +101,13 @@ namespace Neodent.Forms
 
         private void addNewDentist_Click(object sender, EventArgs e)
         {
-            //this.Hide();
             AddDentistForm addDentistForm = new AddDentistForm();
             addDentistForm.Show();
         }
 
         private void dentistDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            clickEdit = true;
-            if(clickEdit==true)
-            {
-                AddDentistForm addDentistForm = new AddDentistForm();
-                
-                addDentistForm.Show();
-            }
-           
-            //id = Convert.ToInt32(dentistDataGrid.CurrentRow.Cells["Id"].Value);
+            
      
         }
         private void LoadData()

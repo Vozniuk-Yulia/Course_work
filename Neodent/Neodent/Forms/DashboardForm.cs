@@ -1,4 +1,5 @@
 ﻿using Neodent.Context;
+using Neodent.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace Neodent.Forms
         {
             Axis XA = chart1.ChartAreas[0].AxisX;
             Axis YA = chart1.ChartAreas[0].AxisY;
-            Series S1 = chart1.Series[0];
+            Series S1 = chart1.Series[0];    
             List<DateTime> dates = new List<DateTime>();
             DateTime dt = DateTime.Now;
             for (int i = 1; i <= 12; i++)
@@ -51,42 +52,39 @@ namespace Neodent.Forms
             YA.MajorGrid.Enabled = false;
             YA.InterlacedColor = Color.FromArgb(31, Color.LightSeaGreen);
         }
-        //private void LoadChart2()
-        //{
-        //    Axis XA = chart2.ChartAreas[0].AxisX;
-        //    Axis YA = chart2.ChartAreas[0].AxisY;
-        //    Series S1 = chart2.Series[0];
-        //    List<DateTime> dates = new List<DateTime>();
-        //    DateTime dt = DateTime.Now;
-        //    for (int i = 1; i < 7; i++)
-        //    {
-        //        dates.Add(new DateTime(dt.Year, dt.Month, i));
-        //    }
-        //    foreach (DateTime d in dates)
-        //    {
-        //        S1.Points.AddXY(d, 5);
-        //    }
-        //    chart2.Legends[0].Docking = Docking.Bottom;
-        //    chart2.Legends[0].Alignment = StringAlignment.Center;
+        private void LoadChart3()
+        {
+            using (var dbContext = new DentistryDBContext())
+            {
+                if(dbContext.Services.Count()>0)
+                {
+                    var totalServices = dbContext.Services
+                   .OfType<Service>()
+                   .Count();
+                    var data = dbContext.Services
+                        .OfType<Service>()
+                        .GroupBy(s => s.Name)
+                        .Select(g => new {
+                            Category = g.Key,
+                            Count = g.Count()
+                        })
+                        .ToList();
+                    foreach (var item in data)
+                    {
+                        var percentage = (double)item.Count / totalServices;
+                        chart3.Series["s1"].Points.AddXY(item.Category, percentage);
+                    }
 
-        //    S1.XValueType = ChartValueType.Date;  
-        //    XA.MajorGrid.Enabled = false;
-        //    XA.LabelStyle.Format = "ddd";
-
-
-        //    XA.IntervalType = DateTimeIntervalType.Days; 
-        //    XA.Interval = 1;
-        //    XA.IntervalOffset = 1;
+                }
 
 
-        //    YA.IsInterlaced = true;
-        //    YA.MajorGrid.Enabled = false;
-        //    YA.InterlacedColor = Color.FromArgb(31, Color.LightSeaGreen);
-        //}
+            }
+        }
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             LoadChart1();
+            LoadChart3();
             int countOfExperienceMore;
             using (var dbContext=new DentistryDBContext())
             {
@@ -94,7 +92,10 @@ namespace Neodent.Forms
                 allPatientNum.Text = dbContext.Patients.Count().ToString();
                 allDentistNum.Text = dbContext.Dentists.Count().ToString();
                 allApoinmentNum.Text = dbContext.Appointments.Count().ToString();
-                //bunifuCircleProgressbar1.Value = (countOfExperienceMore/dbContext.Dentists.Count()) * 100;
+                if(dbContext.Dentists.Count()>0)
+                {
+                    bunifuCircleProgressbar1.Value = (countOfExperienceMore/dbContext.Dentists.Count()) * 100;
+                }
                 countAppoinmentToday.Text = dbContext.Appointments.Where(d => d.Date.Date == DateTime.Today).Count().ToString();
                 countNewPatient.Text=dbContext.Patients.Where(d=>d.RegistratedDate.Date == DateTime.Now.Date.AddDays(-30)).Count().ToString();
             }

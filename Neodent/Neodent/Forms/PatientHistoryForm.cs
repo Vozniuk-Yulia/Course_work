@@ -24,7 +24,6 @@ namespace Neodent.Forms
 
         private void AddPatientHistoryBtn_Click(object sender, EventArgs e)
         {
-            //this.Hide();
             AddPatientHistoryForm addPatientHistoryForm = new AddPatientHistoryForm();
             addPatientHistoryForm.NamePatient=PatientHistoryName;
             addPatientHistoryForm.Show();

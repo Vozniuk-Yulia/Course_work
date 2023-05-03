@@ -58,21 +58,6 @@ namespace Neodent.Forms
             }
         }
 
-        private void detailAppointmentGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-            
-        }
-
-        private void detailAppointmentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void detailAppointmentGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            for (int counter = 1; counter < (detailAppointmentGridView.Rows.Count - 1);counter++)
-            {
-            }
-        }
+        
     }
 }

@@ -20,7 +20,12 @@ namespace Neodent
             Application.EnableVisualStyles();
             using (var dbContext = new DentistryDBContext())
             {
-              
+                Service service = new Service() { Name="Консультація", Price=150};
+                Service service1 = new Service() { Name = "Лікування", Price = 800 };
+                Service service2 = new Service() { Name = "Протезування", Price = 4000 };
+                dbContext.Services.Add(service);
+                dbContext.Services.Add(service1);
+                dbContext.Services.Add(service2);
             }
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());

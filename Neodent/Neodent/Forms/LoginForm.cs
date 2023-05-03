@@ -46,36 +46,36 @@ namespace Neodent.Forms
                 label3.Visible = true;
 
             }
-            //this.Hide();
+
 
             if (ValidateChildren(ValidationConstraints.None))
             {
                 if(radioButton1.Checked==true)
                 {
-                    //if (dbContext.Users.Where(u => u.Email == textBox1.Text && u.Password==textBox2.Text).Count()>0)
-                    //{
+                    if (dbContext.Users.Where(u => u.Email == textBox1.Text && u.Password == textBox2.Text).Count() > 0)
+                    {
                         MainForm mainPanel = new MainForm();
                         mainPanel.Show();
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Неправильна електрона пошта або пароль");
-                    //}
-                   
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неправильна електрона пошта або пароль");
+                    }
+
                 }
                 else if(radioButton2.Checked==true)
                 {
-                    //if (dbContext.Users.Where(u => u.Email == textBox1.Text && u.Password == textBox2.Text).Count() > 0)
-                    //{
+                    if (dbContext.Users.Where(u => u.Email == textBox1.Text && u.Password == textBox2.Text).Count() > 0)
+                    {
                         DentistMainForm dentistMainForm = new DentistMainForm();
                         dentistMainForm.Show();
-                       
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Неправильна електрона пошта або пароль");
-                    //}
-                   
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неправильна електрона пошта або пароль");
+                    }
+
                 }
                
             }
@@ -150,6 +150,13 @@ namespace Neodent.Forms
             {
                 label3.Visible = false;
             }
+        }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
         }
     }
 }
