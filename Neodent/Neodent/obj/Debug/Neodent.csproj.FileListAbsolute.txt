@@ -110,3 +110,4 @@ E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\ru\Microsoft.Data.SqlClient.re
 E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 E:\knute\oop\CourseWork\Neodent\Neodent\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.DetailDayAppointment.resources
+E:\knute\oop\CourseWork\Neodent\Neodent\obj\Debug\Neodent.Forms.RegisterForm.resources

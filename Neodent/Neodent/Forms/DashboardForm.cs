@@ -15,7 +15,7 @@ namespace Neodent.Forms
 {
     public partial class DashboardForm : Form
     {
-       
+        public string Email { get; set; }
         public DashboardForm()
         {
             InitializeComponent();
@@ -80,6 +80,16 @@ namespace Neodent.Forms
 
             }
         }
+        private void LoadUserData()
+        {
+            using (var dbContext = new DentistryDBContext())
+            {
+                var administrator = dbContext.Administrators.Where(a => a.User.Email == Email).FirstOrDefault();
+                loginNameUser.Text = administrator.User.Name;
+                surnameUser.Text = administrator.User.Surname;
+            }
+            
+        }
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
@@ -99,7 +109,7 @@ namespace Neodent.Forms
                 countAppoinmentToday.Text = dbContext.Appointments.Where(d => d.Date.Date == DateTime.Today).Count().ToString();
                 countNewPatient.Text=dbContext.Patients.Where(d=>d.RegistratedDate.Date == DateTime.Now.Date.AddDays(-30)).Count().ToString();
             }
-
+            LoadUserData();
 
         }
 

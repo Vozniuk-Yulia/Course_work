@@ -1,5 +1,7 @@
 ﻿using Neodent.Context;
+using Neodent.Interfaces;
 using Neodent.Models;
+using Neodent.Presenters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +21,13 @@ namespace Neodent.Forms
         private string gender;
         private int num;
         private DateTime result;
+
+        private readonly IDentistRepository _repository;
+
         public AddDentistForm()
         {
             InitializeComponent();
+            _repository = new DentistRepository(new DentistryDBContext());
         }
 
         public string GendreChoice()
@@ -56,22 +62,19 @@ namespace Neodent.Forms
                 WorkExperience = Int32.Parse(txtDentistExperience.Text),
                 Education = txtDentistEducation.Text
             };
-
-            if (string.IsNullOrEmpty(txtDentistName.Text) || string.IsNullOrEmpty(txtDentistSurname.Text) || string.IsNullOrEmpty(txtDentistMiddlename.Text) || string.IsNullOrEmpty(txtDentistSpecialization.Text) || string.IsNullOrEmpty(txtDentistPhone.Text) || string.IsNullOrEmpty(txtDentistEducation.Text) || string.IsNullOrEmpty(txtDentistAddress.Text))
+            if (string.IsNullOrEmpty(txtDentistName.Text) || string.IsNullOrEmpty(txtDentistSurname.Text) || string.IsNullOrEmpty(txtDentistMiddlename.Text) || string.IsNullOrEmpty(txtDentistEducation.Text) || string.IsNullOrEmpty(txtDentistPhone.Text) || string.IsNullOrEmpty(txtDentistEmail.Text))
             {
                 MessageBox.Show("Введіть коректні дані");
             }
-            else if(int.TryParse(txtDentistExperience.Text, out num) && DateTime.TryParseExact(txtDentistBirthday.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out result))
+            else
             {
-
-                using (var dbContext = new DentistryDBContext())
-                {
-                    dbContext.Dentists.Add(dentist);
-                    dbContext.SaveChanges();
-                }
+                _repository.Add(dentist);
                 MessageBox.Show("Додано успішно");
                 this.Close();
             }
+
+            
+           
             
         }
 

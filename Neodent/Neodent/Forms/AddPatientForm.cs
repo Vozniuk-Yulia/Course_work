@@ -1,4 +1,5 @@
 ﻿using Neodent.Context;
+using Neodent.Interfaces;
 using Neodent.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Neodent.Forms
 {
     public partial class AddPatientForm : Form
     {
+        private readonly IPatientRepository _repository;
         private string gender;
         private int num;
         private DateTime result;
@@ -63,13 +65,9 @@ namespace Neodent.Forms
             {
                 MessageBox.Show("Введіть коректні дані");
             }
-            else if (int.TryParse(txtPatientBloodType.Text, out num) && DateTime.TryParseExact(txtPatientBirthday.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out result) && DateTime.TryParseExact(txtPatientRegisterData.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out result) && DateTime.TryParseExact(txtPatientLastVisit.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out result))
+            else
             {
-                using (var dbContext = new DentistryDBContext())
-                {
-                    dbContext.Patients.Add(patient);
-                    dbContext.SaveChanges();
-                }
+                _repository.Add(patient);
                 MessageBox.Show("Додано успішно");
                 this.Close();
 

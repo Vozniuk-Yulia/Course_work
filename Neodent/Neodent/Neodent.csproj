@@ -291,6 +291,9 @@
     <Compile Include="Forms\ScheduleForm.Designer.cs">
       <DependentUpon>ScheduleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IDentistRepository.cs" />
+    <Compile Include="Interfaces\IPatientHistoryRepository.cs" />
+    <Compile Include="Interfaces\IPatientRepository.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Dentist.cs" />
@@ -298,6 +301,9 @@
     <Compile Include="Models\PatientHistory.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Presenters\DentistRepository.cs" />
+    <Compile Include="Presenters\PatientHistoryRepository.cs" />
+    <Compile Include="Presenters\PatientRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddDentistForm.resx">

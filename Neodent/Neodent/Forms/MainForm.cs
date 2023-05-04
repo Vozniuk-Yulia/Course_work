@@ -12,6 +12,7 @@ namespace Neodent.Forms
 {
     public partial class MainForm : Form
     {
+        public string Email { get; set; }
         public MainForm()
         {
             InitializeComponent();
@@ -75,7 +76,9 @@ namespace Neodent.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ContainerMainForm(new DashboardForm());
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.Email = Email;
+            ContainerMainForm(dashboardForm);
         }
     }
 }

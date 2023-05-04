@@ -15,6 +15,8 @@ namespace Neodent.Forms
     {
         public bool isPassword;
         DentistryDBContext dbContext;
+       
+        public string Email { get; set; }
         public LoginForm()
         {
             InitializeComponent();
@@ -54,8 +56,11 @@ namespace Neodent.Forms
                 {
                     if (dbContext.Users.Where(u => u.Email == textBox1.Text && u.Password == textBox2.Text).Count() > 0)
                     {
+
                         MainForm mainPanel = new MainForm();
+                        mainPanel.Email = textBox1.Text;
                         mainPanel.Show();
+
                     }
                     else
                     {

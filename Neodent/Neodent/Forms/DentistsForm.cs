@@ -1,4 +1,5 @@
 ﻿using Neodent.Context;
+using Neodent.Interfaces;
 using Neodent.Models;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Neodent.Forms
 {
     public partial class DentistsForm : Form
     {
+        private readonly IDentistRepository _repository;
         public int id;
         public bool clickEdit = false;
         public DentistsForm()
@@ -21,20 +23,18 @@ namespace Neodent.Forms
             InitializeComponent();
             
         }
-
-
-
         private void removeDentist_Click(object sender, EventArgs e)
         {
-                int selectedId = Convert.ToInt32(dentistDataGrid.CurrentRow.Cells["Id"].Value);
-                using (var dbContext = new DentistryDBContext())
-                {
+            int selectedId = Convert.ToInt32(dentistDataGrid.CurrentRow.Cells["Id"].Value);
+
+            using (var dbContext = new DentistryDBContext())
+            {
                 var dentist = dbContext.Dentists.Where(d => d.Id == selectedId).FirstOrDefault();
-                    dbContext.Dentists.Remove(dentist);
-                    dbContext.SaveChanges();
-                }
-                MessageBox.Show("Видаленно успішно");
-            
+                dbContext.Dentists.Remove(dentist);
+                dbContext.SaveChanges();
+            }
+            MessageBox.Show("Видаленно успішно");
+
         }
 
         private void DentistsForm_Load(object sender, EventArgs e)

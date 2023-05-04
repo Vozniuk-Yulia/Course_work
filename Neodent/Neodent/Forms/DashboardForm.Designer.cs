@@ -69,9 +69,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.countNewPatient = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.surnameUser = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.loginNameUser = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
@@ -407,9 +407,9 @@
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.surnameUser);
             this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.loginNameUser);
             this.panel7.Controls.Add(this.pictureBox5);
             this.panel7.Location = new System.Drawing.Point(780, 46);
             this.panel7.Name = "panel7";
@@ -472,15 +472,15 @@
             this.label16.TabIndex = 7;
             this.label16.Text = "Кількість нових пацієнтів";
             // 
-            // label15
+            // surnameUser
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(172, 131);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 25);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Грищук";
+            this.surnameUser.AutoSize = true;
+            this.surnameUser.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surnameUser.Location = new System.Drawing.Point(172, 131);
+            this.surnameUser.Name = "surnameUser";
+            this.surnameUser.Size = new System.Drawing.Size(87, 25);
+            this.surnameUser.TabIndex = 6;
+            this.surnameUser.Text = "Грищук";
             // 
             // label11
             // 
@@ -492,15 +492,15 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Адміністратор";
             // 
-            // label10
+            // loginNameUser
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(80, 131);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 25);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Анна";
+            this.loginNameUser.AutoSize = true;
+            this.loginNameUser.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginNameUser.Location = new System.Drawing.Point(80, 131);
+            this.loginNameUser.Name = "loginNameUser";
+            this.loginNameUser.Size = new System.Drawing.Size(62, 25);
+            this.loginNameUser.TabIndex = 1;
+            this.loginNameUser.Text = "Анна";
             // 
             // pictureBox5
             // 
@@ -606,14 +606,14 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label loginNameUser;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label surnameUser;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel9;
